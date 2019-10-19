@@ -1,0 +1,114 @@
+@charset "utf-8";
+
+// 추가 인클루드는 _setting 안에다가 하기 여기 인클루드는 _setting 하나만 나와있게 관리하기
+@import '../../_src/_scss/_setting';
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,700&display=swap&subset=korean');
+
+// @import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+/* vietnamese */
+@font-face {
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Anton Regular'), local('Anton-Regular'), url(https://fonts.gstatic.com/s/anton/v10/1Ptgg87LROyAm3K8-C8QSw.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Anton Regular'), local('Anton-Regular'), url(https://fonts.gstatic.com/s/anton/v10/1Ptgg87LROyAm3K9-C8QSw.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Anton';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Anton Regular'), local('Anton-Regular'), url(https://fonts.gstatic.com/s/anton/v10/1Ptgg87LROyAm3Kz-C8.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+// http://wit.nts-corp.com/2017/02/13/4258
+// 웹폰트에 대한 참고 사이트 입니다.
+// 깜빡거림 현상 같은거 해결 방법 있음
+// fontfaceobserver.js
+
+
+/*! Nanum Barun Gothic (Korean) http://hangeul.naver.com */
+// @font-face {
+// 	font-family: 'Nanum Gothic';
+// 	font-style: bold;
+// 	font-weight: 700;
+// 	src: url(font/NanumGothic-Bold.eot);/* IE 호환성 보기 */
+// 	src: url(font/NanumGothic-Bold.eot?#iefix) format('embedded-opentype'),/* IE 6 ~ 8 */
+// 		url(font/NanumGothic-Bold.woff2) format('woff2'),/* WOFF2 지원 브라우저 */
+// 		url(font/NanumGothic-Bold.woff) format('woff'),모던 브라우저
+// 		url(font/NanumGothic-Bold.ttf) format('truetype');
+// }
+
+
+// @font-face {
+// 	font-family: NanumSquare;
+// 	src: url(NanumSquareR.eot); /* IE 6 ~ 8, IE 호환성 보기 */
+// 	src: local(☺),
+// 		url(NanumSquareR.woff2) format('woff2'), /* IE Edge, WOFF2 지원 브라우저 */
+// 		url(NanumSquareR.woff) format('woff'), /* IE 9+, 모던 브라우저 */
+// 		url(NanumSquareR.ttf) format('truetype');
+// }
+
+// local(☺)
+
+//- 웹폰트를 사용하는 경우 font stylesheet 를 사용 합니다.
+//- 위 소스는 네이버의 나눔고딕 예제 입니다.
+//- 폰트의 경로등은 프로젝트시 개발그룹과 상의해서 정하세요.
+//- 폰트 파일은 요청해서 받으시기 바랍니다.
+//- 모바일에서는 웹폰트는 비추천입니다. 폰트다운속도도 느리고 다운받는것 전부 사용자 데이터 요금입니다.
+
+// :lang(en){font-family:"맑은 고딕";color:red;}
+// :lang(ko){font-family:"궁서";color:blue;}
+// 해당영역에 {영어폰트(영어만 지원해야함), 한글폰트, 기본폰트}로 순으로 폰트 설정하고 숫자만 인라인 테그로 처리
+
+
+// @font-face {
+// 	font-family: NotoSans-DemiLight;
+// 	// font-weight: 350;
+// 	src: url('../fonts/notosanskr/NotoSans-DemiLight.eot'); /* IE 6 ~ 8, IE 호환성 보기 */
+// 	src: local(☺),
+// 		url('../fonts/notosanskr/NotoSans-DemiLight.woff2') format('woff2'), /* IE Edge, WOFF2 지원 브라우저 */
+// 		url('../fonts/notosanskr/NotoSans-DemiLight.woff') format('woff'), /* IE 9+, 모던 브라우저 */
+// 		url('../fonts/notosanskr/NotoSans-DemiLight.ttf') format('truetype');
+// }
+
+
+
+// @font-face {
+// 	font-family: NotoSans-Bold;
+// 	// font-weight: 700;
+// 	src: url('../fonts/notosanskr/NotoSans-Bold.eot'); /* IE 6 ~ 8, IE 호환성 보기 */
+// 	src: local(☺),
+// 		url('../fonts/notosanskr/NotoSans-Bold.woff2') format('woff2'), /* IE Edge, WOFF2 지원 브라우저 */
+// 		url('../fonts/notosanskr/NotoSans-Bold.woff') format('woff'), /* IE 9+, 모던 브라우저 */
+// 		url('../fonts/notosanskr/NotoSans-Bold.ttf') format('truetype');
+// }
+
+
+
+
+
+
+// 아래는 fontfaceobserver.js 사용할때 쓰는 클래스들
+.fonts-load{visibility: hidden;}
+// .font-load-end{visibility: visible;}
+// .fonts-loaded .font-load{visibility: visible;}
+.fonts-loaded .fonts-load {visibility: visible;}

@@ -1,0 +1,102 @@
+extends ../../_src/_pug/_extend_html5
+
+//- layout 에서 선언한 공통적인 title 값이 맨뒤에 들어 감.
+block title
+	title #{metaTitle_main} #{title}
+	//- 뎁스별로 경로 바꿀때
+	- var url_css_0 = url_css_2;
+	- var url_js_0 = url_js_2;
+	- var url_img_common_0 = url_img_common_2;
+
+block keywords&description
+	meta(name="keywords" content=`${metaKeywords_main}`)
+	meta(name="description" content=`${metaDescription_main}`)
+
+block property
+	meta(property="og:title" content=`${ogTitle_main}`)
+	meta(property="og:url" content=`${ogUrl_main}`)
+	meta(property="og:image" content=`${ogImage_main}`)
+	meta(property="og:description" content=`${ogDescription_main}`)
+
+append css
+
+block vars
+	- var bodyClass = 'ui_dep2'
+	- var wrapClass = 'ui_fold'
+
+block contents
+	#container
+		#content(role='main')
+			// 2dep 탭 영역
+			.dep2-wrap
+				label(for="dep2")
+				select(name="dep2" id="dep2")
+					option(selected="selected") 자주묻는 질문
+					option 체육관 뉴스
+					option 채용지원
+			.cont
+				.community-wrap
+					.community-cont
+						p.tit FAQ
+						.fold-area
+							.fold-list.on
+								.fold-header
+									em.fold-icon Q.
+									span.fold-tit 체육관 이용 요금은 얼마인가요?
+								.fold-cont
+									em.fold-icon A.
+									span.fold-txt 물론 이죠, 가나다라마바사 아자차카 타파하 복싱클럽만 믿으시면 됩니다다다다다다다복싱클럽만 믿으시면 됩니다다다다다다 다복싱클럽만 믿으시면 됩니다다다다다다
+							.fold-list
+								.fold-header
+									em.fold-icon Q.
+									span.fold-tit 등록한 sm복싱클럽 외에 타 지점은 어떻게 이용하나요?
+								.fold-cont
+									em.fold-icon A.
+									span.fold-txt 물론 이죠, 가나다라마바사 아자차카 타파하 복싱클럽만 믿으시면 됩니다다다다다다다복싱클럽만 믿으시면 됩니다다다다다다 다복싱클럽만 믿으시면 됩니다다다다다다
+							.fold-list
+								.fold-header
+									em.fold-icon Q.
+									span.fold-tit 체육관 이용 요금은 얼마인가요?
+								.fold-cont
+									em.fold-icon A.
+									span.fold-txt 물론 이죠, 가나다라마바사 아자차카 타파하 복싱클럽만 믿으시면 됩니다다다다다다다복싱클럽만 믿으시면 됩니다다다다다다 다복싱클럽만 믿으시면 됩니다다다다다다
+							.fold-list
+								.fold-header
+									em.fold-icon Q.
+									span.fold-tit 체육관 이용 요금은 얼마인가요?
+								.fold-cont
+									em.fold-icon A.
+									span.fold-txt 물론 이죠, 가나다라마바사 아자차카 타파하 복싱클럽만 믿으시면 됩니다다다다다다다복싱클럽만 믿으시면 됩니다다다다다다 다복싱클럽만 믿으시면 됩니다다다다다다
+							.fold-list
+								.fold-header
+									em.fold-icon Q.
+									span.fold-tit 체육관 이용 요금은 얼마인가요?
+								.fold-cont
+									em.fold-icon A.
+									span.fold-txt 물론 이죠, 가나다라마바사 아자차카 타파하 복싱클럽만 믿으시면 됩니다다다다다다다복싱클럽만 믿으시면 됩니다다다다다다 다복싱클럽만 믿으시면 됩니다다다다다다
+							.fold-list
+								.fold-header
+									em.fold-icon Q.
+									span.fold-tit 체육관 이용 요금은 얼마인가요?
+								.fold-cont
+									em.fold-icon A.
+									span.fold-txt 물론 이죠, 가나다라마바사 아자차카 타파하 복싱클럽만 믿으시면 됩니다다다다다다다복싱클럽만 믿으시면 됩니다다다다다다 다복싱클럽만 믿으시면 됩니다다다다다다
+							.fold-list
+								.fold-header
+									em.fold-icon Q.
+									span.fold-tit 체육관 이용 요금은 얼마인가요?
+								.fold-cont
+									em.fold-icon A.
+									span.fold-txt 물론 이죠, 가나다라마바사 아자차카 타파하 복싱클럽만 믿으시면 됩니다다다다다다다복싱클럽만 믿으시면 됩니다다다다다다 다복싱클럽만 믿으시면 됩니다다다다다다
+							.fold-list
+								.fold-header
+									em.fold-icon Q.
+									span.fold-tit 체육관 이용 요금은 얼마인가요?
+								.fold-cont
+									em.fold-icon A.
+									span.fold-txt 물론 이죠, 가나다라마바사 아자차카 타파하 복싱클럽만 믿으시면 됩니다다다다다다다복싱클럽만 믿으시면 됩니다다다다다다 다복싱클럽만 믿으시면 됩니다다다다다다
+
+
+append script
+	script.
+	

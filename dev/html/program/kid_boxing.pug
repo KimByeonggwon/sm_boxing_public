@@ -1,0 +1,70 @@
+extends ../../_src/_pug/_extend_html5
+
+//- layout 에서 선언한 공통적인 title 값이 맨뒤에 들어 감.
+block title
+	title #{metaTitle_main} #{title}
+	//- 뎁스별로 경로 바꿀때
+	- var url_css_0 = url_css_2;
+	- var url_js_0 = url_js_2;
+	- var url_img_common_0 = url_img_common_2;
+
+block keywords&description
+	meta(name="keywords" content=`${metaKeywords_main}`)
+	meta(name="description" content=`${metaDescription_main}`)
+
+block property
+	meta(property="og:title" content=`${ogTitle_main}`)
+	meta(property="og:url" content=`${ogUrl_main}`)
+	meta(property="og:image" content=`${ogImage_main}`)
+	meta(property="og:description" content=`${ogDescription_main}`)
+
+append css
+
+block vars
+	- var bodyClass = 'ui_dep2'
+	- var wrapClass = ''
+
+block contents
+	#container
+		#content(role='main')
+			// 2dep 탭 영역
+			.dep2-wrap
+				label(for="dep2")
+				select(name="dep2" id="dep2")
+					option(selected="selected") 키즈복싱
+					option 정통복싱
+					option 다이어트 복싱
+					option 개인 P.T
+
+			// full 영역일 경우
+			.cont
+				// full bg 영역
+				.program-wrap
+					//비디오 영역
+					.program-video-bg
+						.program-video-wrap
+							.video-box
+								<iframe class="video" width="320" height="180" src="https://www.youtube.com/embed/VUigoI2lh4w?autoplay=1" frameborder="0" allowfullscreen></iframe>
+
+
+					// 텍스트 영역
+					.program-txt-wrap
+						// 타이틀
+						p.program-tit 키즈 복싱 프로그램
+						// 이미지
+						img(src="../../images/pc/img_pro04.jpg", alt="키즈 복싱 프로그램").img-pc
+						// 컨텐츠 텍스트
+						.program-txt-cont.clfix
+							.l-wrap
+								p.sub-tit 건강한 육체에<br>건전한 정신, 키즈복싱
+							.r-wrap
+								span.txt 아동비만, 학교폭력, 자존감 증진, 신체 성장 등을 목적으로 하는 키즈복싱 프로그램, 줄넘기와 복싱기술 훈련, 실전 대련연습, 기초체력 훈련, 건전한 정신교육 등 아이들의 눈높이에서 담당 지도자의 지도아래 안전하고 즐겁게 운동지도합니다. 아이들의 삶의 건강한 놀이터가 되는 체육관, SM복싱클럽에서 우리아이 육체적 정신적 건강과 성장이 시작됩니다.
+								em.etc-txt - 8세부터 13세까지 이용가능
+
+							
+
+
+
+
+append script
+	script.

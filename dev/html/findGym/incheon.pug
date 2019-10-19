@@ -1,0 +1,316 @@
+extends ../../_src/_pug/_extend_html5
+
+//- layout 에서 선언한 공통적인 title 값이 맨뒤에 들어 감.
+block title
+	title #{metaTitle_main} #{title}
+	//- 뎁스별로 경로 바꿀때
+	- var url_css_0 = url_css_2;
+	- var url_js_0 = url_js_2;
+	- var url_img_common_0 = url_img_common_2;
+
+block keywords&description
+	meta(name="keywords" content=`${metaKeywords_main}`)
+	meta(name="description" content=`${metaDescription_main}`)
+
+block property
+	meta(property="og:title" content=`${ogTitle_main}`)
+	meta(property="og:url" content=`${ogUrl_main}`)
+	meta(property="og:image" content=`${ogImage_main}`)
+	meta(property="og:description" content=`${ogDescription_main}`)
+
+append css
+
+block vars
+	- var bodyClass = 'ui_dep2 ui_tab'
+	- var wrapClass = ''
+
+block contents
+	#container
+		#content(role='main')
+			// 2dep 탭 영역
+			.dep2-wrap
+				label(for="dep2")
+				select(name="dep2" id="dep2")
+					option(selected="selected") 인천
+					option 서울
+			.cont
+				.find-gym-cont
+					.tab-wrap
+						ul.tab-list.tab05.clfix
+							li.on
+								a(href="#")
+									span 4관
+							li
+								a(href="#")
+									span 5관
+							li
+								a(href="#")
+									span 6관
+							li
+								a(href="#")
+									span 7관
+							li
+								a(href="#")
+									span 8관
+					
+
+					// 4관
+					.tab-cont.on
+						.gym-map-wrap
+							// 지도 영역
+							#map4.map-cont
+
+							.map-txt-wrap
+								.map-tit-wrap
+									span.bold 4관.
+									em 인천광역시 미추홀구 석정로 303 삼덕상가
+									
+								.map-info
+									ul.map-info-txt-wrap
+										li 문의하기.
+											span 032 - 866 - 7920
+										li 카카오톡 ID. 
+											span 
+									.map-btn-wrap
+										a(href="#").btn.naver
+											span 네이버 검색
+										a(href="#").btn.cafe
+											span 네이버 카페
+										a(href="#").btn.blog
+											span 네이버 블로그
+
+						.gym-photo-wrap
+							p.tit 시설 미리보기
+							.gym-img-slider-wrap
+								//- .slider-main.ui-slider-for
+								//- 	img(src="../../images/pc/view_img_10_01.jpg", alt="")
+								//- 	img(src="../../images/pc/view_img_10_02.jpg", alt="")
+								//- 	img(src="../../images/pc/view_img_10_03.jpg", alt="")
+								//- 	img(src="../../images/pc/view_img_10_04.jpg", alt="")
+								//- 	img(src="../../images/pc/view_img_10_05.jpg", alt="")
+								//- 	img(src="../../images/pc/view_img_10_06.jpg", alt="")
+								//- 	img(src="../../images/pc/view_img_10_07.jpg", alt="")
+								//- 	img(src="../../images/pc/view_img_10_08.jpg", alt="")
+								//- .slider-nav.ui-slider-nav
+								//- 	img(src="../../images/pc/view_img_10_01.jpg", alt="")
+								//- 	img(src="../../images/pc/view_img_10_02.jpg", alt="")
+								//- 	img(src="../../images/pc/view_img_10_03.jpg", alt="")
+								//- 	img(src="../../images/pc/view_img_10_04.jpg", alt="")
+								//- 	img(src="../../images/pc/view_img_10_05.jpg", alt="")
+								//- 	img(src="../../images/pc/view_img_10_06.jpg", alt="")
+								//- 	img(src="../../images/pc/view_img_10_07.jpg", alt="")
+								//- 	img(src="../../images/pc/view_img_10_08.jpg", alt="")
+
+					// 5관
+					.tab-cont
+						.gym-map-wrap
+							// 지도 영역
+							#map5.map-cont
+
+							.map-txt-wrap
+								.map-tit-wrap
+									span.bold 5관.
+									em 인천광역시 남동구 경인로 644번길 세아빌딩
+									.sns-wrap
+										a(href="#").btn-sns.instagram
+											span.hide-txt 인스타그램
+										a(href="#").btn-sns.facebook
+											span.hide-txt 페이스북
+									
+								.map-info
+									ul.map-info-txt-wrap
+										li 문의하기.
+											span 032 - 428 - 7920
+										li 카카오톡 ID. 
+											span sis046
+									.map-btn-wrap
+										a(href="#").btn.naver
+											span 네이버 검색
+										a(href="#").btn.cafe
+											span 네이버 카페
+										a(href="#").btn.blog
+											span 네이버 블로그
+
+						.gym-photo-wrap
+							p.tit 시설 미리보기
+							.gym-img-slider-wrap
+								.slider-main.ui-slider-for
+									img(src="../../images/pc/view_img_05_01.jpg", alt="")
+									img(src="../../images/pc/view_img_05_02.jpg", alt="")
+									img(src="../../images/pc/view_img_05_03.jpg", alt="")
+									img(src="../../images/pc/view_img_05_04.jpg", alt="")
+									img(src="../../images/pc/view_img_05_05.jpg", alt="")
+									img(src="../../images/pc/view_img_05_06.jpg", alt="")
+								.slider-nav.ui-slider-nav
+									img(src="../../images/pc/view_img_05_01.jpg", alt="")
+									img(src="../../images/pc/view_img_05_02.jpg", alt="")
+									img(src="../../images/pc/view_img_05_03.jpg", alt="")
+									img(src="../../images/pc/view_img_05_04.jpg", alt="")
+									img(src="../../images/pc/view_img_05_05.jpg", alt="")
+									img(src="../../images/pc/view_img_05_06.jpg", alt="")
+
+					// 6관
+					.tab-cont
+						.gym-map-wrap
+							// 지도 영역
+							#map6.map-cont
+
+							.map-txt-wrap
+								.map-tit-wrap
+									span.bold 6관.
+									em 인천광역시 부평구 원적로 432번길 20
+									.sns-wrap
+										a(href="#").btn-sns.youtube
+											span.hide-txt 유튜브
+								.map-info
+									ul.map-info-txt-wrap
+										li 문의하기.
+											span 032 - 521 - 2244
+										li 카카오톡 ID. 
+											span touch123
+									.map-btn-wrap
+										a(href="#").btn.naver
+											span 네이버 검색
+										a(href="#").btn.cafe
+											span 네이버 카페
+										a(href="#").btn.blog
+											span 네이버 블로그
+						.gym-photo-wrap
+							p.tit 시설 미리보기
+							.gym-img-slider-wrap
+								.slider-main.ui-slider-for
+									img(src="../../images/pc/view_img_06_01.jpg", alt="")
+									img(src="../../images/pc/view_img_06_02.jpg", alt="")
+									img(src="../../images/pc/view_img_06_03.jpg", alt="")
+									img(src="../../images/pc/view_img_06_04.jpg", alt="")
+									img(src="../../images/pc/view_img_06_05.jpg", alt="")
+									img(src="../../images/pc/view_img_06_06.jpg", alt="")
+								.slider-nav.ui-slider-nav
+									img(src="../../images/pc/view_img_06_01.jpg", alt="")
+									img(src="../../images/pc/view_img_06_02.jpg", alt="")
+									img(src="../../images/pc/view_img_06_03.jpg", alt="")
+									img(src="../../images/pc/view_img_06_04.jpg", alt="")
+									img(src="../../images/pc/view_img_06_05.jpg", alt="")
+									img(src="../../images/pc/view_img_06_06.jpg", alt="")
+
+					// 7관
+					.tab-cont
+						.gym-map-wrap
+							// 지도 영역
+							#map7.map-cont
+
+							.map-txt-wrap
+								.map-tit-wrap
+									span.bold 7관.
+									em 인천광역시 남동구 구월로 338 성호빌딩
+									.sns-wrap
+										a(href="#").btn-sns.facebook
+											span.hide-txt 페이스북
+								.map-info
+									ul.map-info-txt-wrap
+										li 문의하기.
+											span 032 - 472 - 1995 
+										li 카카오톡 ID. 
+											span psalms121
+									.map-btn-wrap
+										a(href="#").btn.naver
+											span 네이버 검색
+										a(href="#").btn.cafe
+											span 네이버 카페
+										a(href="#").btn.blog
+											span 네이버 블로그
+						.gym-photo-wrap
+							p.tit 시설 미리보기
+							.gym-img-slider-wrap
+								.slider-main.ui-slider-for
+									img(src="../../images/pc/view_img_07_01.jpg", alt="")
+									img(src="../../images/pc/view_img_07_02.jpg", alt="")
+									img(src="../../images/pc/view_img_07_03.jpg", alt="")
+									img(src="../../images/pc/view_img_07_04.jpg", alt="")
+									img(src="../../images/pc/view_img_07_05.jpg", alt="")
+									img(src="../../images/pc/view_img_07_06.jpg", alt="")
+									img(src="../../images/pc/view_img_07_07.jpg", alt="")
+									img(src="../../images/pc/view_img_07_08.jpg", alt="")
+								.slider-nav.ui-slider-nav
+									img(src="../../images/pc/view_img_07_01.jpg", alt="")
+									img(src="../../images/pc/view_img_07_02.jpg", alt="")
+									img(src="../../images/pc/view_img_07_03.jpg", alt="")
+									img(src="../../images/pc/view_img_07_04.jpg", alt="")
+									img(src="../../images/pc/view_img_07_05.jpg", alt="")
+									img(src="../../images/pc/view_img_07_06.jpg", alt="")
+									img(src="../../images/pc/view_img_07_07.jpg", alt="")
+									img(src="../../images/pc/view_img_07_08.jpg", alt="")
+
+					// 8관
+					.tab-cont
+						.gym-map-wrap
+							// 지도 영역
+							#map8.map-cont
+
+							.map-txt-wrap
+								.map-tit-wrap
+									span.bold 8관.
+									em 인천광역시 남동구 장승남로 40 한별프라자 203, 204호
+								.map-info
+									ul.map-info-txt-wrap
+										li 문의하기.
+											span 032 - 465 - 2705
+										li 카카오톡 ID. 
+											span jkk7503
+									.map-btn-wrap
+										a(href="#").btn.naver
+											span 네이버 검색
+										a(href="#").btn.cafe
+											span 네이버 카페
+										a(href="#").btn.blog
+											span 네이버 블로그
+						.gym-photo-wrap
+							p.tit 시설 미리보기
+							.gym-img-slider-wrap
+								.slider-main.ui-slider-for
+									img(src="../../images/pc/view_img_08_01.jpg", alt="")
+									img(src="../../images/pc/view_img_08_02.jpg", alt="")
+									img(src="../../images/pc/view_img_08_03.jpg", alt="")
+									img(src="../../images/pc/view_img_08_04.jpg", alt="")
+									img(src="../../images/pc/view_img_08_05.jpg", alt="")
+									img(src="../../images/pc/view_img_08_06.jpg", alt="")
+									img(src="../../images/pc/view_img_08_07.jpg", alt="")
+									img(src="../../images/pc/view_img_08_08.jpg", alt="")
+								.slider-nav.ui-slider-nav
+									img(src="../../images/pc/view_img_08_01.jpg", alt="")
+									img(src="../../images/pc/view_img_08_02.jpg", alt="")
+									img(src="../../images/pc/view_img_08_03.jpg", alt="")
+									img(src="../../images/pc/view_img_08_04.jpg", alt="")
+									img(src="../../images/pc/view_img_08_05.jpg", alt="")
+									img(src="../../images/pc/view_img_08_06.jpg", alt="")
+									img(src="../../images/pc/view_img_08_07.jpg", alt="")
+									img(src="../../images/pc/view_img_08_08.jpg", alt="")
+
+append script
+	script(src=`//dapi.kakao.com/v2/maps/sdk.js?appkey=cbf134aa1e5c01a91daa6d20263cb77f`, type='text/javascript', charset='utf-8')
+	script.
+
+		$(document).ready(function(){
+			 $('.ui-slider-for').slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				arrows: false,
+				fade: true,
+				asNavFor: '.ui-slider-nav'
+			});
+			$('.ui-slider-nav').slick({
+				slidesToShow: 4,
+				slidesToScroll: 1,
+				asNavFor: '.ui-slider-for',
+				focusOnSelect: true,
+				responsive:[
+					{
+						breakpoint: 1024,
+						settings: {
+							arrows: false,
+							slidesToShow: 2
+						}
+					}
+				]
+			});			
+		});

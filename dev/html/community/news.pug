@@ -1,0 +1,110 @@
+extends ../../_src/_pug/_extend_html5
+
+//- layout 에서 선언한 공통적인 title 값이 맨뒤에 들어 감.
+block title
+	title #{metaTitle_main} #{title}
+	//- 뎁스별로 경로 바꿀때
+	- var url_css_0 = url_css_2;
+	- var url_js_0 = url_js_2;
+	- var url_img_common_0 = url_img_common_2;
+
+block keywords&description
+	meta(name="keywords" content=`${metaKeywords_main}`)
+	meta(name="description" content=`${metaDescription_main}`)
+
+block property
+	meta(property="og:title" content=`${ogTitle_main}`)
+	meta(property="og:url" content=`${ogUrl_main}`)
+	meta(property="og:image" content=`${ogImage_main}`)
+	meta(property="og:description" content=`${ogDescription_main}`)
+
+append css
+
+block vars
+	- var bodyClass = 'ui_dep2'
+	- var wrapClass = ''
+
+block contents
+	#container
+		#content(role='main')
+			// 2dep 탭 영역
+			.dep2-wrap
+				label(for="dep2")
+				select(name="dep2" id="dep2")
+					option(selected="selected") 체육관 뉴스
+					option 자주 묻는 질문
+					option 채용지원
+			.cont
+				.community-wrap
+					.community-cont
+						p.tit News
+						.tb-wrap
+							table
+								caption News | 번호, 제목, 작성일, 조회수
+								colgroup
+									col(style="width:15%;")
+									col(style="width:auto;")
+									col(style="width:15%;")
+									col(style="width:15%;")
+								thead
+									tr
+										th 번호
+										th 제목
+										th 작성일
+										th 조회수
+								tbody
+									tr
+										td 01
+										td 
+											a(href="#") SM복싱클럽 사이트 신규 오픈
+										td 2019.08.01
+										td 10
+									tr
+										td 02
+										td
+											a(href="#") SM복싱클럽 전체 매장 점검에 따른 영업휴점
+										td 2019.08.02
+										td 99
+									tr
+										td 03
+										td
+											a(href="#") SM복싱클럽 사이트 신규 오픈
+										td 2019.08.03
+										td 758
+									tr
+										td 04
+										td
+											a(href="#") SM복싱클럽 전체 매장 점검에 따른 영업휴점
+										td 2019.08.04
+										td 1,600
+									tr
+										td 05
+										td
+											a(href="#") SM복싱클럽 사이트 신규 오픈
+										td 2019.08.05
+										td 200
+
+						.pagination
+							a(href="#").paging-prev
+								span.hide-txt 이전
+							.paging-list
+								span.paging.on
+									span.txt 1
+								a(href="#").paging
+									span.txt 2
+								a(href="#").paging
+									span.txt 3
+								a(href="#").paging
+									span.txt 4
+								a(href="#").paging
+									span.txt 5
+							a(href="#").paging-next.on
+								span.hide-txt 다음
+
+
+
+
+
+
+append script
+	script.

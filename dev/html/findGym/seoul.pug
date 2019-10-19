@@ -1,0 +1,403 @@
+extends ../../_src/_pug/_extend_html5
+
+//- layout 에서 선언한 공통적인 title 값이 맨뒤에 들어 감.
+block title
+	title #{metaTitle_main} #{title}
+	//- 뎁스별로 경로 바꿀때
+	- var url_css_0 = url_css_2;
+	- var url_js_0 = url_js_2;
+	- var url_img_common_0 = url_img_common_2;
+
+block keywords&description
+	meta(name="keywords" content=`${metaKeywords_main}`)
+	meta(name="description" content=`${metaDescription_main}`)
+
+block property
+	meta(property="og:title" content=`${ogTitle_main}`)
+	meta(property="og:url" content=`${ogUrl_main}`)
+	meta(property="og:image" content=`${ogImage_main}`)
+	meta(property="og:description" content=`${ogDescription_main}`)
+
+append css
+
+block vars
+	- var bodyClass = 'ui_dep2 ui_tab'
+	- var wrapClass = ''
+
+block contents
+	#container
+		#content(role='main')
+			// 2dep 탭 영역
+			.dep2-wrap
+				label(for="dep2")
+				select(name="dep2" id="dep2")
+					option(selected="selected") 서울
+					option 인천
+			.cont
+				.find-gym-cont
+					.tab-wrap
+						ul.tab-list.tab05.clfix
+							li.on
+								a(href="#")
+									span 1관
+							li
+								a(href="#")
+									span 2관
+							li
+								a(href="#")
+									span 3관
+							li
+								a(href="#")
+									span 9관
+							li
+								a(href="#")
+									span 10관
+					
+
+					// 1관
+					.tab-cont.on
+						.gym-map-wrap
+							// 지도 영역
+							#map1.map-cont
+							
+							.map-txt-wrap
+								.map-tit-wrap
+									span.bold 1관(본관).
+									em 서울시 양천구 등촌로 68									
+								.map-info
+									ul.map-info-txt-wrap
+										li 문의하기.
+											span 02 - 2644 - 0989
+										li 카카오톡 ID. 
+											span hsm7744
+									.map-btn-wrap
+										a(href="#").btn.naver
+											span 네이버 검색
+										a(href="#").btn.cafe
+											span 네이버 카페
+
+						.gym-photo-wrap
+							p.tit 시설 미리보기
+							.gym-img-slider-wrap
+								.slider-main.ui-slider-for
+									img(src="../../images/pc/view_img_01_01.jpg", alt="")
+									img(src="../../images/pc/view_img_01_02.jpg", alt="")
+									img(src="../../images/pc/view_img_01_03.jpg", alt="")
+									img(src="../../images/pc/view_img_01_04.jpg", alt="")
+									img(src="../../images/pc/view_img_01_05.jpg", alt="")
+								.slider-nav.ui-slider-nav
+									img(src="../../images/pc/view_img_01_01.jpg", alt="")
+									img(src="../../images/pc/view_img_01_02.jpg", alt="")
+									img(src="../../images/pc/view_img_01_03.jpg", alt="")
+									img(src="../../images/pc/view_img_01_04.jpg", alt="")
+									img(src="../../images/pc/view_img_01_05.jpg", alt="")
+
+
+					// 2관
+					.tab-cont
+						.gym-map-wrap
+							// 지도 영역
+							#map2.map-cont
+
+							.map-txt-wrap
+								.map-tit-wrap
+									span.bold 2관.
+									em 서울시 양천구 목동중앙북로 21
+									
+								.map-info
+									ul.map-info-txt-wrap
+										li 문의하기.
+											span 02 - 2644 - 0989
+										li 카카오톡 ID. 
+											span hsw775
+									.map-btn-wrap
+										a(href="#").btn.naver
+											span 네이버 검색
+										a(href="#").btn.cafe
+											span 네이버 카페
+										a(href="#").btn.blog
+											span 네이버 블로그
+
+						.gym-photo-wrap
+							p.tit 시설 미리보기
+							.gym-img-slider-wrap
+								.slider-main.ui-slider-for
+									img(src="../../images/pc/view_img_02_01.jpg", alt="")
+									img(src="../../images/pc/view_img_02_02.jpg", alt="")
+									img(src="../../images/pc/view_img_02_03.jpg", alt="")
+									img(src="../../images/pc/view_img_02_04.jpg", alt="")
+									img(src="../../images/pc/view_img_02_05.jpg", alt="")
+									img(src="../../images/pc/view_img_02_06.jpg", alt="")
+									img(src="../../images/pc/view_img_02_07.jpg", alt="")
+									img(src="../../images/pc/view_img_02_08.jpg", alt="")
+								.slider-nav.ui-slider-nav
+									img(src="../../images/pc/view_img_02_01.jpg", alt="")
+									img(src="../../images/pc/view_img_02_02.jpg", alt="")
+									img(src="../../images/pc/view_img_02_03.jpg", alt="")
+									img(src="../../images/pc/view_img_02_04.jpg", alt="")
+									img(src="../../images/pc/view_img_02_05.jpg", alt="")
+									img(src="../../images/pc/view_img_02_06.jpg", alt="")
+									img(src="../../images/pc/view_img_02_07.jpg", alt="")
+									img(src="../../images/pc/view_img_02_08.jpg", alt="")
+							
+
+					// 3관
+					.tab-cont
+						.gym-map-wrap
+							// 지도 영역
+							#map3.map-cont
+
+							.map-txt-wrap
+								.map-tit-wrap
+									span.bold 3관.
+									em 서울시 양천구 오목로 213, 1
+									.sns-wrap
+										a(href="#").btn-sns.instagram
+											span.hide-txt 인스타그램
+								.map-info
+									ul.map-info-txt-wrap
+										li 문의하기.
+											span 02 - 2698 - 7920
+										li 카카오톡 ID. 
+											span smboxing03
+									.map-btn-wrap
+										a(href="#").btn.naver
+											span 네이버 검색
+										a(href="#").btn.cafe
+											span 네이버 카페
+										a(href="#").btn.blog
+											span 네이버 블로그
+						.gym-photo-wrap
+							p.tit 시설 미리보기
+							.gym-img-slider-wrap
+								.slider-main.ui-slider-for
+									img(src="../../images/pc/view_img_03_01.jpg", alt="")
+									img(src="../../images/pc/view_img_03_02.jpg", alt="")
+									img(src="../../images/pc/view_img_03_03.jpg", alt="")
+									img(src="../../images/pc/view_img_03_04.jpg", alt="")
+									img(src="../../images/pc/view_img_03_05.jpg", alt="")
+									img(src="../../images/pc/view_img_03_06.jpg", alt="")
+									img(src="../../images/pc/view_img_03_07.jpg", alt="")
+									img(src="../../images/pc/view_img_03_08.jpg", alt="")
+								.slider-nav.ui-slider-nav
+									img(src="../../images/pc/view_img_03_01.jpg", alt="")
+									img(src="../../images/pc/view_img_03_02.jpg", alt="")
+									img(src="../../images/pc/view_img_03_03.jpg", alt="")
+									img(src="../../images/pc/view_img_03_04.jpg", alt="")
+									img(src="../../images/pc/view_img_03_05.jpg", alt="")
+									img(src="../../images/pc/view_img_03_06.jpg", alt="")
+									img(src="../../images/pc/view_img_03_07.jpg", alt="")
+									img(src="../../images/pc/view_img_03_08.jpg", alt="")
+
+
+					// 9관
+					.tab-cont
+						.gym-map-wrap
+
+							// 지도 영역
+							#map9.map-cont
+
+							.map-txt-wrap
+								.map-tit-wrap
+									span.bold 9관.
+									em 서울시 강동구 올림픽로 626
+									.sns-wrap
+										a(href="#").btn-sns.youtube
+											span.hide-txt 유튜브
+										a(href="#").btn-sns.instagram
+											span.hide-txt 인스타그램
+										a(href="#").btn-sns.facebook
+											span.hide-txt 페이스북
+								.map-info
+									ul.map-info-txt-wrap
+										li 문의하기.
+											span 02 - 478 - 7989
+										li 카카오톡 ID. 
+											span 
+									.map-btn-wrap
+										a(href="#").btn.naver
+											span 네이버 검색
+										a(href="#").btn.cafe
+											span 네이버 카페
+										a(href="#").btn.blog
+											span 네이버 블로그
+						.gym-photo-wrap
+							p.tit 시설 미리보기
+							.gym-img-slider-wrap
+								.slider-main.ui-slider-for
+									img(src="../../images/pc/view_img_09_01.jpg", alt="")
+									img(src="../../images/pc/view_img_09_02.jpg", alt="")
+									img(src="../../images/pc/view_img_09_03.jpg", alt="")
+									img(src="../../images/pc/view_img_09_04.jpg", alt="")
+									img(src="../../images/pc/view_img_09_05.jpg", alt="")
+									img(src="../../images/pc/view_img_09_06.jpg", alt="")
+									img(src="../../images/pc/view_img_09_07.jpg", alt="")
+									img(src="../../images/pc/view_img_09_08.jpg", alt="")
+								.slider-nav.ui-slider-nav
+									img(src="../../images/pc/view_img_09_01.jpg", alt="")
+									img(src="../../images/pc/view_img_09_02.jpg", alt="")
+									img(src="../../images/pc/view_img_09_03.jpg", alt="")
+									img(src="../../images/pc/view_img_09_04.jpg", alt="")
+									img(src="../../images/pc/view_img_09_05.jpg", alt="")
+									img(src="../../images/pc/view_img_09_06.jpg", alt="")
+									img(src="../../images/pc/view_img_09_07.jpg", alt="")
+									img(src="../../images/pc/view_img_09_08.jpg", alt="")
+
+					// 10관
+					.tab-cont
+						.gym-map-wrap
+							// 지도 영역
+							#map10.map-cont
+
+							.map-txt-wrap
+								.map-tit-wrap
+									span.bold 10관.
+									em 서울특별시 금천구 금하로 750(관악우방아파트 상가)
+									.sns-wrap
+										a(href="#").btn-sns.instagram
+											span.hide-txt 인스타그램
+										a(href="#").btn-sns.facebook
+											span.hide-txt 페이스북
+								.map-info
+									ul.map-info-txt-wrap
+										li 문의하기.
+											span 02 - 803 - 7920
+										li 카카오톡 ID. 
+											span ironboxing
+									.map-btn-wrap
+										a(href="#").btn.naver
+											span 네이버 검색
+										a(href="#").btn.cafe
+											span 네이버 카페
+										a(href="#").btn.blog
+											span 네이버 블로그
+						.gym-photo-wrap
+							p.tit 시설 미리보기
+							.gym-img-slider-wrap
+								.slider-main.ui-slider-for
+									img(src="../../images/pc/view_img_10_01.jpg", alt="")
+									img(src="../../images/pc/view_img_10_02.jpg", alt="")
+									img(src="../../images/pc/view_img_10_03.jpg", alt="")
+									img(src="../../images/pc/view_img_10_04.jpg", alt="")
+									img(src="../../images/pc/view_img_10_05.jpg", alt="")
+									img(src="../../images/pc/view_img_10_06.jpg", alt="")
+									img(src="../../images/pc/view_img_10_07.jpg", alt="")
+									img(src="../../images/pc/view_img_10_08.jpg", alt="")
+								.slider-nav.ui-slider-nav
+									img(src="../../images/pc/view_img_10_01.jpg", alt="")
+									img(src="../../images/pc/view_img_10_02.jpg", alt="")
+									img(src="../../images/pc/view_img_10_03.jpg", alt="")
+									img(src="../../images/pc/view_img_10_04.jpg", alt="")
+									img(src="../../images/pc/view_img_10_05.jpg", alt="")
+									img(src="../../images/pc/view_img_10_06.jpg", alt="")
+									img(src="../../images/pc/view_img_10_07.jpg", alt="")
+									img(src="../../images/pc/view_img_10_08.jpg", alt="")
+							
+				
+
+append script
+	script(src=`//dapi.kakao.com/v2/maps/sdk.js?appkey=cbf134aa1e5c01a91daa6d20263cb77f`, type='text/javascript', charset='utf-8')
+	script.
+		$(document).ready(function(){
+			
+			
+			 $('.ui-slider-for').slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				arrows: false,
+				fade: true,
+				setPosition : true,
+				asNavFor: '.ui-slider-nav'
+			});
+			$('.ui-slider-nav').slick({
+				slidesToShow: 4,
+				slidesToScroll: 1,
+				asNavFor: '.ui-slider-for',
+				setPosition : true,
+				focusOnSelect: true,
+				responsive:[
+					{
+						breakpoint: 1024,
+						settings: {
+							arrows: false,
+							slidesToShow: 2
+						}
+					}
+				]
+			});
+
+
+			// 1관
+			var container1 = document.getElementById('map1');
+			var options1 = {
+				center: new kakao.maps.LatLng(37.53611899611797, 126.86374733091611),
+				level: 3
+			};		
+
+			// 2관
+			var container2 = document.getElementById('map2');
+			var options2 = {
+				center: new kakao.maps.LatLng(37.548469045815835, 126.86616011591776),
+				level: 3
+			};
+
+			// 3관
+			var container3 = document.getElementById('map3');
+			var options3 = {
+				center: new kakao.maps.LatLng(37.525927567070035, 126.86124536212441),
+				level: 3
+			};
+
+			// 9관
+			var container9 = document.getElementById('map9');
+			var options9 = {
+				center: new kakao.maps.LatLng(37.53722162216685, 127.1233153292424),
+				level: 3
+			};
+
+			// 10관
+			var container10 = document.getElementById('map10');
+			var options10 = {
+				center: new kakao.maps.LatLng(37.449377280998384, 126.91344080763992),
+				level: 3
+			};
+
+			var map1 = new kakao.maps.Map(container1, options1);
+			var map2 = new kakao.maps.Map(container2, options2);
+			var map3 = new kakao.maps.Map(container3, options3);
+			var map9 = new kakao.maps.Map(container9, options9);
+			var map10 = new kakao.maps.Map(container10, options10);
+
+			// 마커가 표시될 위치입니다 
+			var markerPosition1  = new kakao.maps.LatLng(37.53611899611797, 126.86374733091611); 
+			var markerPosition2  = new kakao.maps.LatLng(37.548469045815835, 126.86616011591776); 
+			var markerPosition3  = new kakao.maps.LatLng(37.525927567070035, 126.86124536212441); 
+			var markerPosition9  = new kakao.maps.LatLng(37.53722162216685, 127.1233153292424); 
+			var markerPosition10  = new kakao.maps.LatLng(37.449377280998384, 126.91344080763992);
+
+
+			// 마커를 생성합니다
+			var marker1 = new kakao.maps.Marker({
+					position: markerPosition1
+			});
+			var marker2 = new kakao.maps.Marker({
+					position: markerPosition2
+			});
+			var marker3 = new kakao.maps.Marker({
+					position: markerPosition3
+			});
+			var marker9 = new kakao.maps.Marker({
+					position: markerPosition9
+			});
+			var marker10 = new kakao.maps.Marker({
+					position: markerPosition10
+			});
+
+			// 마커가 지도 위에 표시되도록 설정합니다
+			marker1.setMap(map1);
+			marker2.setMap(map2);
+			marker3.setMap(map3);
+			marker9.setMap(map9);
+			marker10.setMap(map10);
+		});
+

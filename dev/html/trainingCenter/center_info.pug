@@ -1,0 +1,247 @@
+extends ../../_src/_pug/_extend_html5
+
+//- layout 에서 선언한 공통적인 title 값이 맨뒤에 들어 감.
+block title
+	title #{metaTitle_main} #{title}
+	//- 뎁스별로 경로 바꿀때
+	- var url_css_0 = url_css_2;
+	- var url_js_0 = url_js_2;
+	- var url_img_common_0 = url_img_common_2;
+
+block keywords&description
+	meta(name="keywords" content=`${metaKeywords_main}`)
+	meta(name="description" content=`${metaDescription_main}`)
+
+block property
+	meta(property="og:title" content=`${ogTitle_main}`)
+	meta(property="og:url" content=`${ogUrl_main}`)
+	meta(property="og:image" content=`${ogImage_main}`)
+	meta(property="og:description" content=`${ogDescription_main}`)
+
+append css
+
+block vars
+	- var bodyClass = 'ui_tab'
+	- var wrapClass = ''
+
+block contents
+	#container
+		#content(role='main')
+			.dep2-wrap.no-select
+				p SM 스포츠 인재 양성소
+			.cont
+				.center-info-wrap
+					.info-txt-wrap
+						p.tit Who we are
+						.txt-box
+							p SM복싱클럽은 2005년부터 정통복싱을 기반으로 하여 복싱을 통한 국민 건강의 대중화를 목표로 2019년 현재에 이르기까지 서울 (강서, 양천, 천호, 강동, 금천) 인천(간석, 만수, 부평, 도화, 구월) 전국 10개관에 이르렀습니다. 본 클럽은 매순간 더 양질의 운동으로 건강을 통해 선한 영향력을 전파하기 위해 힘쓰고 있습니다.
+							p 하여 보다 건강한 지도자를 육성하기 위하여 자체 지도자 교육을 통해 다양한 운동방법과 더 깊은 복싱 지도 방법 등 여러가지 교육 프로그램으로 각 지점에 파급하여 복싱에 대한 이미지의 개선 및 건강에 대한 새로운 접근을 늘 연구하고 시도하고 있습니다.
+							p 또한 프로,엘리트 전문 복싱 선수들을 양성하여 복싱이라는 종목의 발전에 이바지 하는 전문체육으로의 진로도 열려있으며 선수 활동 후의 진로 계획 설정과 은퇴 선수의 재사회화 등 다양한 부분을 SM 스포츠 인재양성소는 아우릅니다. 
+							p SM 스포츠 인재 양성소는 지,덕,체를 갖춘 존경받는 스포츠 인재를 양성하며 스포츠인 자체의 품격을 높히기 위하여 힘쓰고 있습니다.
+					.center-info-tab-wrap
+						.tab-wrap
+							ul.tab-list.tab02.clfix
+								li.on
+									a(href="#").mt-line
+										span SM 스포츠<br class="mo">지도자 교육과정
+								li
+									a(href="#")
+										span SM 복싱 선수단
+						
+						// SM 스포츠 지도자 교육과정
+						.tab-cont.on
+							.tab-inner
+								img(src="../../images/pc/img_center_img01.jpg", alt="SM 스포츠 지도자 교육과정01").pc-img
+								img(src="../../images/mobile/img_center_img01.jpg", alt="SM 스포츠 지도자 교육과정01").mo-img
+								.leader-txt.clfix
+									p.tit 우리를 위한<br>나를 만들다
+									span.txt 전문적인 지식과 인성을 갖춘 스포츠 지도자를 양성합니다.<br class="mo">스포츠에 대한 이해, 트레이닝 방법, 재활치료, 응급처치 등 양질의 운동 프로그램을 지도 할 수 있는, 매너, 에티켓, 운동예절 교육으로 회원에게 올바른 멘토링을 할 수 있는 인격적으로 성숙한 올바른 지도자로 거듭날 수 있는 교육 시스템입니다.
+								img(src="../../images/pc/img_center_img02.jpg", alt="SM 스포츠 지도자 교육과정02").pc-img
+								img(src="../../images/mobile/img_center_img02.jpg", alt="SM 스포츠 지도자 교육과정02").mo-img
+								.leader-step
+									span.sub-tit SM Sports Leader Training Course
+									p.tit SM 스포츠 지도자 교육 과정
+									dl.step-list
+										dt 1. 교육대상
+										dd 트레이너(코치) 지망생 / 운동에 관심있는 체육관 회원 / 퍼스날 트레이너 지망생<br>전,현직 프로 복싱선수 / 체육관 운영에 관심있는 현직 트레이너<br>체육계 진학을 목표로 하는 학생 / 향후 체육관 오픈을 앞둔 예비 관장님
+										dt 2. 교육목적
+										dd 건강을 위해 체육관에 찾아오는 여러 회원들에게 더 나은 양질의 운동을 제공하기 위해서는 건강에 대해 확실한 이해가 필요하다.<br class="mo"> 운동 중 발생할 수 있는 여러 상해를 예방하고, 운동 지도에 관해 더욱 심화된 교육을 통해 기존 회원들의 삶의 질을 높혀줄 기회 !<br class="mo"> 또한 운동에 관심있는 일반 대중 및 전,현직 선수들에게 SM복싱클럽만의 특별한 운영 노하우 및 운동 지도법 등을 통해 향후 진로에 대한 새로운 비젼을 제시한다.<br><br class="mo">SM 지도자 교육과정은 이러한 사람들에게 새로운 이정표가 될 체계적이고 필수적인 교육과정이다.
+										dt 3. 교육과정
+										dd.step-etc
+											.leader-info-box-wrap.clfix
+												// 복싱
+												.info-box01
+													.info-tit-wrap
+														span.sub-txt BOXING
+														p.info-tit 복싱
+													p.txt SM 복싱클럽 공식 진도표를 이용한 쉽고 재미있는 생활 복싱 지도 방법 국가대표 출신 전문 복싱 지도자가 지도하는 선수를 위한 복싱 지도 방법 기초부터 잡아보는 복싱의 대한 완전한 이해 교육 
+												// 웨이트
+												.info-box02
+													.info-tit-wrap
+														span.sub-txt Weight
+														p.info-tit 웨이트
+													p.txt SM 복싱클럽 전 지점에서 활용 되고 있는 여러가지 웨이트 운동법 지도 타바타, 크로스핏, 보디빌딩, 써키트 트레이닝(순환운동), P.T(퍼스날트레이닝) 등 초보부터 중급,상급자까지 각 목적에 맞춰 지도 할 수 있는 고급 지도 노하우 교육
+												// 실무 교육
+												.info-box03
+													.info-tit-wrap
+														span.sub-txt Work Experience
+														p.info-tit 실무 교육
+													p.txt 국내 전 지역 오픈 마다 성공하고 인정받는 SM 복싱클럽의 실제 운영 노하우 교육과정 운동과 교육, 관리는 다르다 !!<br>"회원 관리, 시설 관리, 마케팅, 카운셀링 " 각 섹션 별로 실제 경험을 통한 교육 과정
+												// 검정 및 수료
+												.info-box04
+													.info-tit-wrap
+														p.info-tit 검정 및 수료
+													p.txt 교육 연수가 끝난 후 교육에 대한 자체 검정(Test) 평가가 이루어지며, 검정에 합격한 인원은 SM복싱클럽 인증 수료증 발급, 교육 이수자에 한해 생활 스포츠 지도사 2급 자격증 추가 교육. 모든 교육이 이수된 후에도 SM복싱클럽 선수팀에서 선수활동 가능 교육 이수자는 프로테스트 응시기회가 주어지며, 합격시에 복싱 프로 라이센스 발급.
+								.support-wrap.clfix
+									p.tit 지원 방법
+									.support-box-cont.clfix
+										.support-box
+											p.box-tit 이메일 이력서 지원
+											span.box-txt jyboxing@naver.com
+										.support-box
+											p.box-tit 유선 문의
+											span.box-txt 02-803-7920
+								.leader-txt-wrap
+									.leader-txt-tit
+										p.tit SM 지도자 교육<br class="mo">프로그램 !
+										span.sub-tit 우리를 위한 나를 만들다
+									p.txt 실력, 인성, 품격.  지.덕.체를 모두 갖춘<br class="mo">인재 양성소 !<br>문을 두드리세요, 당신의 새로운 도전을<br class="mo">열어드립니다.
+
+						// SM 복싱 선수단
+						.tab-cont
+							.tab-inner
+								.video-box
+									<iframe class="video" width="320" height="180" src="https://www.youtube.com/embed/VUigoI2lh4w?autoplay=1" frameborder="0" allowfullscreen></iframe>
+								.leader-txt.clfix
+									p.tit 운동으로<br>감동을 전하다
+									span.txt 전문적으로 운동하는 체육인을 양성합니다.<br>프로/아마(엘리트) 선수들을 양성하고 각종 시합 및 대회에 출전 기회를 부여하며 매주 합동 훈련 및 전지훈련 등을 통해 체계적인 트레이닝 시스템으로 단련합니다.
+								img(src="../../images/pc/img_center_img03.jpg", alt="SM 스포츠 지도자 교육과정03")
+								.leader-step
+									span.sub-tit SM Boxing Team
+									p.tit SM 복싱 선수단
+									p.txt 전문 운동선수의 훈련 모습 속에서는 그동안의 고되고 힘든 과정들을 엿볼 수 있습니다.<br><br class="mo">그들이 챔피언,국가대표 등 목표로 나아가는 과정, 그들이 흘리는 피와 땀에서는 진한 감동이 전해집니다.<br>SM 복싱클럽에서는 복싱에 대한 열정과 꿈을 함께 공유하고 힘차게 날아오를 선수단원을 모집 및 선발합니다.
+									.leader-info-box-wrap.clfix
+										// 프로 복싱
+										.info-box05
+											.info-tit-wrap
+												span.sub-txt Pro Boxing
+												p.info-tit 프로 복싱
+											p.txt 상업적인 이익을 목적으로 경기에 임합니다.<br>4R 선수 부터 시작하여 6R 8R 10R 랭킹전, 신인왕전, 타이틀전 등 챔피언 및 랭킹이 존재하며 높은 수준의 선수일수록 상품성 또한 비례합니다. 
+										// 아마(엘리트) 복싱
+										.info-box06
+											.info-tit-wrap
+												span.sub-txt Amateur Boxing
+												p.info-tit 아마(엘리트) 복싱
+											p.txt 아마추어리즘을 지향하며 상업적인 이익보다는 복싱이라는 종목의 기능의 탁월함을 목적으로 경기에 임합니다.<br>체육대학 진학 및 국가대표, 전국체전, 세계복싱대회, 올림픽 등을 목적으로 하는 전문 스포츠입니다. 
+							.box-team-wrap
+								.box-team-inner
+									.box-team-tit-wrap
+										p.tit SM 복싱 선수단 소개
+									.box-team-slider
+										.box-team-slider-main.ui-slider-for
+											.slider-box01
+												p.box-tit 박지현 코치
+												.box-record
+													dl.record-list
+														dt 전적 : 27전 24승(6KO) 3패
+														dd (현) WBF 스트로급 세계 챔피언
+														dd (현) WIBF 스트로급 세계 챔피언
+														dd (현) WIBA 스트로급 세계 챔피언
+														dd (현) IFBA 스트로급 세계 챔피언
+												.bx-motto
+													span.tit 좌우명.
+													p.txt 꿈꿀 수 있는 자,<br>그 꿈을<br>이룰 수도 있다.									
+											.slider-box02
+												p.box-tit 설민석 선수
+												.box-record
+													dl.record-list
+														dt 전적 : 3전 2승 1패
+														dd 설민석(sm복싱) vs 서정원(전진만) 4R 판정승
+														dd 설민석(sm복싱) vs 박건호(스피드) 4R 판정패
+														dd 설민석(sm복싱) vs 양준모(대한권투) 4R 판정승								
+											.slider-box03
+												p.box-tit 유주안 선수
+												.box-record
+													dl.record-list
+														dt 전적 : 4전 2승(1KO) 2패
+														dd 유주안(sm복싱) vs 한윤태(대한) 4R 판정패
+														dd 유주안(sm복싱) vs 조종율(통진BMP) 1R KO승
+														dd 유주안(sm복싱) vs 전규범(브리드) 4R 판정패
+														dd 유주안(sm복싱) vs 윤원형(천안Beat) 4R 판정승								
+											.slider-box04
+												p.box-tit 정태원 선수
+												.box-record
+													dl.record-list
+														dt 전적 : 4전 3승(1KO) 1패
+														dd 2017년도 KBF(한국권투연맹) 슈퍼페더급 신인왕
+														dd 정태원(sm복싱) vs 최성용(이철형체) 4R 판정승
+														dd 정태원(sm복싱) vs 이대영(인천연수) 4R 판정승
+														dd 정태원(sm복싱) vs 문국민(더원복싱) 3R KO승
+														dd 정태원(sm복싱) vs 김무현(더원복싱) 2R KO패								
+											.slider-box05
+												p.box-tit 양초록 선수
+												.box-record
+													dl.record-list
+														dt 전적 : 7전 3승(2KO) 3패 1무
+														dd 양초록(sm복싱) vs 채시원(평촌권투) 2R KO승
+														dd 양초록(sm복싱) vs 손정환(몬스터) 3R KO승
+														dd 양초록(sm복싱) vs 박준석(영복싱) 4R 판정패
+														dd 양초록(sm복싱) vs 이흑산(천안헐크) 4R 판정패
+														dd 양초록(sm복싱) vs 홍영우(구미거북) 4R 판정승								
+											.slider-box06
+												p.box-tit 홍예준 선수
+												.box-record
+													dl.record-list
+														dt 2019년 전국체전 서울시 대표 선수 (-81kg 일반)
+														dd 2018년 서울신인 선수권 대회 3위 -91kg
+														dd 2018년 전국 회장배 복싱대회 고등부 -81kg 8강
+														dd 2019년 전국 협회장배 복싱대회 대학부 -81kg 8강
+														dd 2019년 제100회 전국체전 서울대표 선발전 -81kg 1위
+											.slider-box07
+												p.box-tit 김의영 선수
+												.box-record
+													dl.record-list
+														dt 2019년 전국 협회장배 복싱대회 +91kg<br>일반부 3위
+
+										.box-team-slider-nav.ui-slider-nav
+											.team-thum01
+												span.hide-txt 박지현 코치
+											.team-thum02
+												span.hide-txt 설민석 선수
+											.team-thum03
+												span.hide-txt 유주안 선수
+											.team-thum04
+												span.hide-txt 정태원 선수
+											.team-thum05
+												span.hide-txt 양초록 선수
+											.team-thum06
+												span.hide-txt 홍예준 선수
+											.team-thum07
+												span.hide-txt 김의영 선수
+
+					.info-bottom
+						.txt-wrap
+							p.tit SM 복싱클럽
+							.btn-wrap
+								a(href="#").btn-list
+									span.txt 자세히 보기
+
+append script
+	script.
+		$(document).ready(function(){
+			 $('.ui-slider-for').slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				arrows: false,
+				fade: true,
+				setPosition : true,
+				asNavFor: '.ui-slider-nav'
+			});
+			$('.ui-slider-nav').slick({
+				slidesToShow: 3,
+				slidesToScroll: 1,
+				asNavFor: '.ui-slider-for',
+				setPosition : true,
+				focusOnSelect: true
+			});			
+		});

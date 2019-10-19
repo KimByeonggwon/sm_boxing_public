@@ -1,0 +1,56 @@
+
+//- 폴더 공통 설정
+- var folder06 = 'html/findGym/'
+
+//- 코딩리스트 컨텐츠 영역
+//- table_contents 괄호 사이에 공백이 있을 경우 오류가 남. 항상 확인하기
+div.cl_list_area
+	div.cl_list_detail
+		h2.cl_category_tit 체육관찾기
+			span.page_count_category
+				//- | (
+				//- span.pcc_ing 1
+				//- | &nbsp;/
+				//- span.pcc_all 1
+				//- | &nbsp;)
+		table.cl_table
+			+table_thead
+			tbody
+				tr
+					+table_contents(
+						'체육관찾기', /* 뎁스 1 */
+						'서울', /* 뎁스 2 */
+						'', /* 뎁스 3 */
+						`${folder06}`, /* 폴더 */
+						'seoul.html', /* 페이지명 */
+						'html', /* 페이지 유형 */
+						'진행중'/* 진행상태 */
+						)
+					td.p_etc
+						div pc 완료 / MO 스와이퍼 작업 남음
+						div 지도 js 해결중
+				//- tr
+				//- 	+table_contents(
+				//- 		'', /* 뎁스 1 */
+				//- 		'경기', /* 뎁스 2 */
+				//- 		'', /* 뎁스 3 */
+				//- 		`${folder06}`, /* 폴더 */
+				//- 		'gyeonggi.html', /* 페이지명 */
+				//- 		'html', /* 페이지 유형 */
+				//- 		''/* 진행상태 */
+				//- 		)
+				//- 	td.p_etc
+				//- 		div
+				tr
+					+table_contents(
+						'', /* 뎁스 1 */
+						'인천', /* 뎁스 2 */
+						'', /* 뎁스 3 */
+						`${folder06}`, /* 폴더 */
+						'incheon.html', /* 페이지명 */
+						'html', /* 페이지 유형 */
+						'진행중'/* 진행상태 */
+						)
+					td.p_etc
+						div pc 완료 / MO 스와이퍼 작업 남음
+						div 지도 js 해결중 

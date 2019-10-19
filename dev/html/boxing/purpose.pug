@@ -1,0 +1,71 @@
+extends ../../_src/_pug/_extend_html5
+
+//- layout 에서 선언한 공통적인 title 값이 맨뒤에 들어 감.
+block title
+	title #{metaTitle_main} #{title}
+	//- 뎁스별로 경로 바꿀때
+	- var url_css_0 = url_css_2;
+	- var url_js_0 = url_js_2;
+	- var url_img_common_0 = url_img_common_2;
+
+block keywords&description
+	meta(name="keywords" content=`${metaKeywords_main}`)
+	meta(name="description" content=`${metaDescription_main}`)
+
+block property
+	meta(property="og:title" content=`${ogTitle_main}`)
+	meta(property="og:url" content=`${ogUrl_main}`)
+	meta(property="og:image" content=`${ogImage_main}`)
+	meta(property="og:description" content=`${ogDescription_main}`)
+
+append css
+//- 	style.
+//- 		html{font-size:24px;}
+//- 		.aaa div{font-size:1.8rem;}
+//- 		.bbb div{font-size:12px}
+//- 		.ccc div{font-size:1.2em}
+//- layout 에서 정의한 변수를 아래와 같이 페이지 별로 사용 가능.
+//- var bodyClass = 'index_page_body'
+//- var wrapClass = 'index_page_wrap'
+block vars
+	- var bodyClass = 'ui_dep2'
+	- var wrapClass = ''
+
+block contents
+	#container
+		#content(role='main')
+			// 2dep 탭 영역
+			.dep2-wrap
+				label(for="dep2")
+				select(name="dep2" id="dep2")
+					option(selected="selected") 체육관목표
+					option 체육관소개
+					option 대표메시지
+
+			// full 영역일 경우
+			.cont.full
+				.cont.purpose-wrap
+					.bg-purpose01
+						.txt-wrap
+							p.txt01.al-center 운동으로 감동을 전하다.
+					.bg-purpose02
+						.txt-wrap
+							p.txt02.al-left 운동을 통해<br>건강해지는 감동
+					.bg-purpose03
+						.txt-wrap
+							p.txt03.al-right 건강을 통해<br>변화되는 삶에 대한 감동
+					.bg-purpose04
+						.txt-wrap
+							p.txt04.al-left 변화된 삶들로<br>세상이 건강해지는 감동
+					.bg-purpose05
+						.txt-wrap.etc
+							span.etc-txt.al-center 운동으로 감동을 전하는 체육관
+							p.txt05.al-center SM복싱클럽
+							
+
+
+
+
+append script
+	script.
+	

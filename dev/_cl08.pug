@@ -1,0 +1,41 @@
+//- 폴더 공통 설정
+- var folder08 = 'html/consulting/'
+
+//- 코딩리스트 컨텐츠 영역
+//- table_contents 괄호 사이에 공백이 있을 경우 오류가 남. 항상 확인하기
+div.cl_list_area
+	div.cl_list_detail
+		h2.cl_category_tit 제휴 컨설팅
+			span.page_count_category
+				//- | (
+				//- span.pcc_ing 1
+				//- | &nbsp;/
+				//- span.pcc_all 1
+				//- | &nbsp;)
+		table.cl_table
+			+table_thead
+			tbody
+				tr
+					+table_contents(
+						'제휴 컨설팅', /* 뎁스 1 */
+						'채용지원', /* 뎁스 2 */
+						'', /* 뎁스 3 */
+						`${folder08}`, /* 폴더 */
+						'recruit.html', /* 페이지명 */
+						'html', /* 페이지 유형 */
+						'진행중'/* 진행상태 */
+						)
+					td.p_etc
+						div pc 완료
+				tr
+					+table_contents(
+						'', /* 뎁스 1 */
+						'창업문의', /* 뎁스 2 */
+						'', /* 뎁스 3 */
+						`${folder08}`, /* 폴더 */
+						'franchise.html', /* 페이지명 */
+						'html', /* 페이지 유형 */
+						''/* 진행상태 */
+						)
+					td.p_etc
+						div 기획자료 미수급

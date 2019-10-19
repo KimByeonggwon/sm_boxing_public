@@ -1,0 +1,65 @@
+//- 폴더 공통 설정
+- var folder03 = 'html/boxing/'
+
+//- 코딩리스트 컨텐츠 영역
+//- table_contents 괄호 사이에 공백이 있을 경우 오류가 남. 항상 확인하기
+div.cl_list_area
+	div.cl_list_detail
+		h2.cl_category_tit SM복싱클럽
+			span.page_count_category
+				//- | (
+				//- span.pcc_ing 1
+				//- | &nbsp;/
+				//- span.pcc_all 1
+				//- | &nbsp;)
+		table.cl_table
+			+table_thead
+			tbody
+				tr
+					+table_contents(
+						'SM복싱클럽', /* 뎁스 1 */
+						'체육관소개', /* 뎁스 2 */
+						'', /* 뎁스 3 */
+						`${folder03}`, /* 폴더 */
+						'info.html', /* 페이지명 */
+						'html', /* 페이지 유형 */
+						'완료'/* 진행상태 */
+						)
+					td.p_etc
+						div 
+				tr
+					+table_contents(
+						'', /* 뎁스 1 */
+						'대표메시지', /* 뎁스 2 */
+						'', /* 뎁스 3 */
+						`${folder03}`, /* 폴더 */
+						'message.html', /* 페이지명 */
+						'html', /* 페이지 유형 */
+						''/* 진행상태 */
+						)
+					td.p_etc
+						div 기획자료 미수급
+				tr
+					+table_contents(
+						'', /* 뎁스 1 */
+						'체육관목표', /* 뎁스 2 */
+						'', /* 뎁스 3 */
+						`${folder03}`, /* 폴더 */
+						'purpose.html', /* 페이지명 */
+						'html', /* 페이지 유형 */
+						'완료'/* 진행상태 */
+						)
+					td.p_etc
+						div
+				//- tr
+				//- 	+table_contents(
+				//- 		'SM복싱클럽', /* 뎁스 1 */
+				//- 		'', /* 뎁스 2 */
+				//- 		'', /* 뎁스 3 */
+				//- 		`${folder03}`, /* 폴더 */
+				//- 		'sub01.html', /* 페이지명 */
+				//- 		'html', /* 페이지 유형 */
+				//- 		'-'/* 진행상태 */
+				//- 		)
+				//- 	td.p_etc
+				//- 		div

@@ -1,0 +1,829 @@
+@charset "utf-8";
+
+/*! header */
+#header{
+  background:#000;
+  // 236 px
+  &::before{position:absolute;left:0;top:88px;content:'';height:236px; width:100%;display:none;background:#000;}
+  .mo-menu{display:none;}
+}
+.header-content{
+  padding:5px 0;margin:0 auto;width: calc(1200/1920*100%);background:rgba(0, 0, 0, 0.9);
+  font-size:0;
+  .logo{
+    float:left;
+    a{display:inline-block;width:186px;height:78px;background:url('../../images/common/logo.png') no-repeat center center; }
+  }
+
+  .gnb-wrap{
+    float:right;width: calc(100% - 200px);
+    .gnb-list{
+      width:100%;text-align:right;
+      > li{
+        position:relative;padding:0 3%;display:inline-block;
+        &:last-child{
+          padding-right:0;
+          .gnb-dep2-list{
+            li{text-align:right;}
+          }
+        }
+      }
+    }
+    .gnb-dep1-item{
+      position:relative;display:block;font-size:18px;line-height:78px;color:#fff;
+      &:hover,
+      &:focus{
+        &::before{position:absolute;bottom:21px;left:0;content:'';display:inline-block;width:100%;height:1px;background:#d5d4d4;}
+      }
+    }
+
+    .gnb-dep2-wrap{
+      display:none;position:absolute;left:0;top:106px;width:100%;z-index:50;
+      .gnb-dep2-list{
+        li{
+          text-align:center;
+          a{
+            font-size:18px;line-height:60px;color:#888;
+            &:hover,
+            &:focus{color:#bd2731;}
+          }
+        }
+      }
+    }
+  }
+
+
+}
+
+
+/*! footer */
+#footer{
+  background:#111;
+  .footer_content{
+    margin:0 auto; width:calc(1200/1920*100%);height:80px;padding:32px 0;background:#111;box-sizing:border-box;
+    .copy-txt{float:left;font-size:14px;color:#666;}
+    .link-wrap{
+      float:right;font-size:0;
+      .link-txt{margin-left:25px;display:inline-block;font-size:14px;color:#666;}
+    }
+  }
+}
+/*! 공통 */
+
+.main,.cont{
+  width:100%;
+  img{width:100%;}
+  br.mo{display:none;}
+  .pc-img{display:block;}
+  .mo-img{display:none;}
+}
+
+.dep2-wrap{
+  margin:0 auto;width:384px;  
+  .ui-selectmenu-button.ui-button{
+    position:relative;margin-right:0;padding:0 32px;width:384px;height:96px;font-size:28px;line-height:96px;font-weight:700;color:#fff;background:#000;border:none;box-sizing:border-box;
+    &:focus{
+      outline:none;
+    } 
+  }
+  .ui-menu .ui-menu-item{background:#000;}
+  .ui-selectmenu-text{margin-right:0;}
+  .ui-selectmenu-icon.ui-icon{position: absolute;top:40px;right:32px;}
+  &.no-select{
+    p{font-size:28px;line-height:96px;font-weight:700;}
+  }
+}
+
+.ui-button .ui-icon, .ui-button:focus .ui-icon, .ui-button:hover .ui-icon, .ui-state-focus .ui-icon, .ui-state-hover .ui-icon{width:21px;height:11px;background:url('../../images/pc/ico_2dep_select.png') no-repeat center center;}
+
+.ui-widget-content{background:#000;}
+.ui-widget.ui-widget-content{padding-bottom:17px;border:none;}
+.ui-corner-all, .ui-corner-bl, .ui-corner-bottom, .ui-corner-left{border-radius:0;}
+.ui-menu-item{padding:17px 0;}
+.ui-menu .ui-menu-item-wrapper{padding:0;padding-left:32px;font-size:28px;font-weight:700;color:#fff;}
+.ui-button.ui-state-active:hover, .ui-button:active, .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active{color:#bd2731;background:transparent;border:none;}
+
+.ui-selectmenu-button-open.ui-corner-top{
+  .ui-selectmenu-icon.ui-icon{transform:rotate( 180deg );}
+}
+
+.main #header{
+  position: absolute;left:0;top:0;width:100%;background:rgba(0, 0, 0, 0.9);z-index:10;
+  .header-content{background:none;}
+}
+// 메인
+.main-wrap{
+  .main-visual-wrap{
+    .visual-list{position:relative;}
+    .slick-dots{
+      position: absolute;bottom:40px;left:50%;transform:translateX(-50%);
+      &:after,
+      &:before{display:table;line-height:0;content:""}
+      &:after{clear:both;}
+      li{
+        margin:0 5px;
+        float:left;width:12px;height:12px;background:transparent;border:2px solid #fff;box-sizing:border-box;
+        button{padding:0;font-size: 0;line-height: 0;display: block;width: 8px;height: 8px;cursor: pointer;color: transparent;border: 0;outline: none;background: transparent;}
+      }
+      .slick-active{background:#bd2731;border:none;}
+    }
+    *[class*="visual-bx"]{
+      padding-top:88px;height:900px;box-sizing:border-box;
+      .txt-bx{
+        width:calc(1200/1920*100%);height:100%;margin:0 auto;display:table;
+        .left-txt{
+          position:relative;display:table-cell;width:55%;vertical-align:middle;
+          span{display:inline-block;font-size:24px;line-height:36px;letter-spacing:-2.5px;}
+          &::after{
+            position: absolute;top:50%;right:0;margin-top:-2.5px;content:'';display:block;width:61%;height:5px;background:#fff;
+          }
+        }
+        .right-txt{
+          display:table-cell;vertical-align:middle;
+          .tit{font-family: 'Anton';font-size:100px;line-height:1;letter-spacing:1.5px;}
+          .txt{margin-top:16px;display:inline-block;font-size:36px;line-height:48px;}
+          .btn-wrap{margin-top:35px;text-align:left;}
+          &.etc{
+            .tit{font-size:160px;}
+            .txt{margin-top:37px;font-size:16px;}
+          }
+          &.kor{
+            .tit{font-family:'Noto Sans KR';font-weight:700;}
+          }
+        }
+
+      }
+    }
+    .visual-bx01{background:url('../../images/pc/img_main_visual01.jpg') no-repeat center center;}
+    .visual-bx02{background:url('../../images/pc/img_main_visual02.jpg') no-repeat center center;}
+    .visual-bx03{background:url('../../images/pc/img_main_visual03.jpg') no-repeat center center;}
+    .visual-bx04{background:url('../../images/pc/img_main_visual04.jpg') no-repeat center center;}
+    .visual-bx05{background:url('../../images/pc/img_main_visual05.jpg') no-repeat center center;}
+  }
+  .main-cont{
+    height:900px;box-sizing:border-box;
+    .btn-wrap{
+      .btn-list{
+        span{padding:0 40px;}
+      }
+    }
+    &.video{
+      background:url('../../images/pc/bg_main2.jpg') no-repeat center center;
+      h2{padding:100px 0 25px;}
+      .video-box{position:relative;width:100%;padding-bottom:56.25%;height:0;}
+      .video{position: absolute; top:0; left: 0; width: 100%; height: 100%;}
+    }
+    &.program{
+      padding-top:93px;
+      .main-cont-inner{
+        position:relative;padding-top:140px;
+        h2{line-height:110px;}
+        &:after{
+          position: absolute;right:0;top:0;z-index:-1;
+          content:'';width:996px;height:600px;display:inline-block;background:url('../../images/pc/img_main03.jpg') no-repeat center center;
+        }
+      }
+      .red-box{
+        padding:64px 82px 0;margin-top:28px; 
+        width:588px;height:420px;background:rgba(189,39,49,0.85);box-sizing:border-box;
+        .box-tit{
+          font-size:36px;line-height:48px;
+          &:after{margin-top:34px;content:'';display:block;width:40px;height:5px;background:#fff;}
+        }
+        .box-txt{margin-top:25px;display:inline-block;font-size:16px;line-height:26px;word-break:keep-all;word-wrap:break-word; }
+        .btn-wrap{
+          margin-top:32px;text-align:left;
+        }
+      }
+    }
+    &.etc{
+      margin-top:100px;height:460px;text-align:center;
+      background:url('../../images/pc/bg_main5.jpg') no-repeat center center;
+      .main-cont-inner{padding-top:105px;}
+      .txt1{font-size:16px;}
+      .txt2{
+        margin-top:42px;font-size:24px;
+        em{margin-top:12px;display:block;font-size:36px;}
+      }
+      .btn-wrap{margin-top:36px;}
+    }
+    .main-cont-inner{
+      width:calc(1200/1920*100%);margin:0 auto;
+    }
+
+    .box-team-wrap{margin-top:0;padding-bottom:0;height:0;}
+
+
+    h2{font-family: 'Anton';font-size:100px;}
+  }
+}
+
+// 체육관소개
+.gym-info-wrap{
+  .bg-gym{
+    width:100%;height:900px;
+    background:url('../../images/pc/img_gyminfo.jpg') no-repeat center center;
+  }
+  .gym-inner{
+    width:calc(1200/1920*100%);margin:0 auto;padding-bottom:135px;
+    *[class*="cont-gym"]{
+      position: relative;
+      .tit{font-family: 'Anton';font-size:60px;line-height:80px;}
+      .txt{font-size:20px;line-height:36px;word-break:keep-all;word-wrap:break-word;}
+    }  
+    .cont-gym01{
+      padding-top:613px;margin-bottom:130px;
+      &:after{
+        position: absolute;top:197px;left:17%;
+        content:'';display:block;width:491px;height:666px;background:url('../../images/pc/img_gyminfo01.jpg') no-repeat center center;z-index:-1;
+      }
+      .txt-box{padding-left:51%;}
+      .tit{margin-bottom:22px;}
+      .txt{padding-right:15%;display:inline-block;}
+    }
+    .cont-gym02{
+      padding-top:382px;
+      &:after{
+        position: absolute;top:0;left:0;
+        content:'';width:100%;height:420px;display:block;background:url('../../images/pc/img_gyminfo02.jpg') no-repeat center center;z-index:-1;
+      }
+      .txt-wrap{
+        margin-top:20px;
+        .txt{
+          float:left;display:block;width:49%;
+          &:last-child{float:right;}
+        }
+        
+      }
+    }
+    .gym-info-img-wrap{
+      padding:210px 0 215px 0;
+      .gym-info{
+        float:left;width:49%;
+        .info-tit{margin-top:12px;font-size:20px;text-align:center;}
+        .logo-list{
+          margin-top:28px;
+          li{
+            float:left;width:calc(100% / 3);
+            &:before{
+              margin:0 auto;content:'';display:block;width:102px;height:102px;
+            }
+            &.logo01{
+              &:before{background-image:url('../../images/pc/img_logo01.png');}
+            }
+            &.logo02{
+              p{padding-top:29px;}
+              &:before{background-image:url('../../images/pc/img_logo02.png');}
+            }
+            &.logo03{
+              &:before{background-image:url('../../images/pc/img_logo03.png');}
+            }
+          }
+          p{padding-top:20px;font-size:16px;line-height:20px;text-align:center; }
+        }
+        .img-bi{width:100%;height:245px;background-image:url('../../images/pc/img_bi.jpg');}
+        &:last-child{float: right;}
+      }
+    }
+    .history-wrap{
+      position: relative;
+      .tit{font-family: 'Anton';font-size:100px;line-height:110px;}
+      .sub-tit{position: absolute;left:0;top:133px;display:inline-block;font-size:36px;}
+      .history-item-list{
+        padding-left:34%;margin-top:25px;
+        .history-item{
+          margin-top:55px;
+          &:first-child{margin-top:0;}
+          .item-tit{
+            width:26%;float:left;padding-top:27px;position:relative;font-family: 'Anton';font-size:32px;
+            &:after{position: absolute;left:0;top:3px;content:'';display:block;width:40px;height:3px;background:#fff;}
+          }
+          .history-list{
+            margin-top:3px;width:74%;float:left;
+            li{font-size:16px;word-break:keep-all;word-wrap:break-word;}
+            li + li{margin-top:22px;}
+            .img-wrap{
+              margin-top:30px;
+              img{display:inline-block;width:384px;height:250px;}
+              &.etc01{
+                img{height:212px;}
+              }
+              &.etc02{
+                img{
+                  float:left;width:49%;height:162px;
+                  &:last-child{float: right;}
+                }                
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+/*! SM 복싱클럽 - 체육관목표 */
+.purpose-wrap{
+  *[class*="bg-purpose"]{
+     height:900px;background-repeat:no-repeat;background-size:cover;background-position:center center;
+  }
+  .bg-purpose01{height:715px;background-image:url('../../images/pc/bg_purpose01.jpg');}
+  .bg-purpose02{background-image:url('../../images/pc/bg_purpose02.jpg');}
+  .bg-purpose03{background-image:url('../../images/pc/bg_purpose03.jpg');}
+  .bg-purpose04{background-image:url('../../images/pc/bg_purpose04.jpg');}
+  .bg-purpose05{background-image:url('../../images/pc/bg_purpose05.jpg');}
+
+  .txt-wrap{
+    position:relative;width:calc(1200/1920*100%);height:100%;margin:0 auto;
+    *[class*="txt"]{position:absolute;width:100%;font-size:80px;font-weight:700;line-height:112px;letter-spacing:-2px;word-break:keep-all;word-wrap: break-word;}
+    .txt01{top:50%;left:50%;margin-top:-56px;margin-left:-50%;}
+    .txt02{top:475px;left:0;}
+    .txt03{top:475px;right:0;}
+    .txt04{top:200px;left:0;}
+
+    &.etc{
+      .etc-txt{
+        top:256px;display:block;font-size:60px;
+        &::before{position:absolute;left:50%;bottom:-112px;margin-left:-2.5px;content:'';display:inline-block;width:5px;height:80px;background:#fff;}
+      }
+      .txt05{top:523px;}
+    }    
+  }
+}
+
+
+/*! 프로그램  */
+.program-wrap{
+  padding-bottom:140px;
+  .program-video-bg{background:url('../../images/pc/bg_program.jpg') no-repeat center top;}
+  .program-video-wrap{width:calc(1200/1920*100%);margin:0 auto;padding-bottom:132px;}
+  .video-box{position:relative;width:100%;padding-bottom:56.25%;height:0;}
+  .video{position: absolute; top:132px; left: 0; width: 100%; height: 100%;}
+  .program-txt-wrap{
+    width:calc(1200/1920*100%);margin:0 auto;margin-top:110px;
+    .program-tit{padding-bottom:75px;font-size:60px;font-weight: 700;text-align:center;}
+    .program-txt-cont{
+      margin-top:72px;
+      .l-wrap{float:left;width:35%;}
+      .r-wrap{float:right;width:65%;}
+      .sub-tit{font-size:40px;font-weight:bold;word-break:keep-all;word-wrap: break-word;}
+      .txt{display:inline-block;font-size:20px;line-height:36px;word-break:keep-all;word-wrap: break-word;}
+      .etc-txt{display:inline-block;margin-top:50px;  font-size:16px;}
+      
+    }
+  }
+}
+
+
+/*! community */
+.community-wrap{
+  background:url('../../images/pc/bg_community.png') no-repeat center top;
+  .community-cont{
+    padding-top:224px;width:calc(1200/1920*100%);margin:0 auto;
+    .tit{padding-bottom:40px;font-family: 'Anton';font-size:60px;text-align:center;}
+    .tb-wrap{
+      table{width:100%;border-top:3px solid #fff;}
+      thead{
+        th{padding:21px 0;font-size:20px;font-weight:700;text-align:center;border-bottom:1px solid #fff;}
+      }
+      tbody{
+        td{
+          padding:22px 0;text-align:center;border-bottom:1px solid #222;
+          a{font-size:16px;color:#fff;}
+          &:nth-child(2){padding-left:5%;text-align:left;}
+        }
+      }
+    }
+    .pagination{
+      margin-top:50px;margin-bottom:140px;text-align:center;
+      .paging-prev{
+        margin-right:20px;display:inline-block;width:18px;height:18px;vertical-align:middle;
+        background:url('../../images/pc/ico_paging_prev_off.png') no-repeat center top;
+        &.on{
+          background:url('../../images/pc/ico_paging_prev.png') no-repeat center top;
+        }
+      }
+      .paging-next{
+        margin-left:20px;display:inline-block;width:18px;height:18px;vertical-align:middle;
+        background:url('../../images/pc/ico_paging_next_off.png') no-repeat center top;
+        &.on{
+          background:url('../../images/pc/ico_paging_next.png') no-repeat center top;
+        }
+      }
+      .paging-list{
+        .paging{
+          display:inline-block;padding:0 5px;
+          .txt{font-size:16px;color:#fff;}
+        }
+        .on{
+          .txt{
+            position:relative;color:#bd2731;
+            &::before{position:absolute;bottom:-5px;left:0;content:'';display:inline-block;width:10px;height:1px;background-color:#bd2731;}
+          }
+        }
+      }
+    }
+
+    .view-wrap{
+      .view-tit-wrap{
+        position:relative;padding:30px 4%;border-top:3px solid #fff;border-bottom:1px solid #fff;
+        .view-tit{display:inline-block;font-size:28px;font-weight:700;color:#fff;}
+        .view-tit-info{float:right;}
+        .day{margin-right:45px;display:inline-block;font-size:16px;line-height:32px;color:#eee;}
+        .view-txt{display:inline-block;font-size:16px;line-height:32px;color:#eee;}
+      }
+      .view-cont{
+        padding:50px 4% 70px;border-bottom:1px solid #222;
+        > *{color:#eee;word-break:keep-all;word-wrap:break-word;font-size:16px;line-height:28px;}
+      }
+    }
+  }
+  .fold-area{
+		margin-bottom:140px;border-top:3px solid #fff;
+		.fold-list{
+			border-bottom:1px solid #222;
+			.fold-icon{position:absolute;left:6%;display:inline-block;font-size:20px;font-weight:700;}
+			.fold-header{
+				position: relative; padding:22px 0;
+				padding-left:calc(115/1200*100%);padding-right:calc(115/1200*100%);
+				cursor: pointer;
+				&:before{
+					position: absolute;right:10%;top:31px; 
+					content:'';display:inline-block;width:14px;height:8px; background:url('../../images/pc/ico_fold.png') no-repeat center top;
+				}
+				.fold-icon{top:22px;}
+				.fold-tit{display:inline-block;font-size:20px;word-break:keep-all;word-wrap:break-word;}
+			}
+			.fold-cont{
+				display:none;position: relative;padding:15px 0;
+				padding-left:calc(115/1200*100%);padding-right:calc(115/1200*100%);
+				background:#222;
+				.fold-icon{top:15px;line-height:36px;}
+				.fold-txt{display:inline-block;font-size:20px;line-height:36px; word-break:keep-all;word-wrap:break-word;}
+			}
+			&.on{
+				.fold-header{
+					&:before{
+						transform: rotate(180deg);
+					}
+				}
+				.fold-cont{display:block;}
+			}
+		}
+	}
+}
+
+.community-wrap + .btn-wrap{margin:60px 0 140px;} 
+
+// 버튼
+.btn-wrap{
+  text-align:center;
+  .btn-list{
+    display:inline-block;font-size:0;border:1px solid #fff;
+    span{padding:0 50px;display:inline-block;font-size:16px;line-height:46px;color:#fff;}
+  }
+}
+
+// 탭
+.tab-wrap{
+  .tab-list{
+    li{
+      float:left;position:relative; 
+      a{
+        padding:22px 0;
+        display:block;text-align:center;border-bottom:2px solid #333;box-sizing:border-box;
+        span{display:inline-block;color:#666;font-size:24px;font-weight:700;}
+      }
+      &.on{
+        a{
+          &:after{position:absolute;left:0;bottom:0;content:'';display:inline-block;width:100%;height:5px;background-color:#fff;}
+        }
+        span{color:#fff;}
+      }
+    }
+    &.tab02{
+      li{width:50%;}
+    }
+    &.tab05{
+      li{width:20%;}
+    }
+  }
+}
+
+// 체육관 찾기
+.find-gym-cont{
+  width:calc(1200/1920*100%);margin:0 auto;padding-bottom:100px;
+  > .tab-wrap{padding-top:45px;}
+  .tab-cont{
+    display:none;
+    &.on{position:static;display:block;}
+    .gym-map-wrap{
+      padding-bottom:50px;border-bottom:1px solid #333;
+      .map-cont{
+        width:100%;height:640px;margin-top:50px;
+      }
+      .map-txt-wrap{padding:0 18px;margin-top:32px;}
+      .map-tit-wrap{
+        position: relative; 
+        .bold{font-weight:700;}
+        span,em{display:inline-block;font-size:28px;}
+        .sns-wrap{
+          position: absolute;right:0;top:-2px; 
+          .btn-sns{
+            margin-left:10px;display:inline-block;width:40px;height:40px;font-size:0;
+            &.youtube{background:url('../../images/pc/ico_youtube.png') no-repeat center top;}
+            &.instagram{background:url('../../images/pc/ico_instagram.png') no-repeat center top;}
+            &.facebook{background:url('../../images/pc/ico_facebook.png') no-repeat center top;}
+            &:first-child{margin-left:0;}
+          }
+        }
+      }
+      .map-info{
+        position: relative;
+        .map-info-txt-wrap{
+          margin-top:35px;
+          li{
+            font-size:20px;margin-top:15px;
+            span{margin-left:15px;display:inline-block;font-weight:700;}
+            &:first-child{margin-top:0;}
+          }
+        }
+        .map-btn-wrap{
+          font-size:0;position: absolute;right:0;top:12px;
+          .btn{
+            position: relative;margin-left:10px;padding:0 20px 0 70px;display:inline-block;font-size:0;border:1px solid #333;
+            span{padding:20px 0;display:inline-block;font-size:16px;color:#fff;}
+            &:before{
+              position: absolute;left:20px;top:50%;transform:translateY(-50%);content:'';display:inline-block;
+            }
+            &.naver{
+              &:before{
+                width:25px;height:24px;
+                background:url('../../images/pc/ico_naver.png') no-repeat center center;
+              }
+            }
+            &.cafe{
+              &:before{
+                width:30px;height:30px;
+                background:url('../../images/pc/ico_cafe.png') no-repeat center center;
+              }
+            }
+            &.blog{
+              &:before{
+                width:30px;height:25px;
+                background:url('../../images/pc/ico_blog.png') no-repeat center center;
+              }
+            }
+            &:first-child{margin-left:0;}
+          }
+        }
+      }
+    }
+    .gym-photo-wrap{
+      padding-top:112px;
+      .tit{margin-bottom:58px;font-size:28px;font-weight:700;text-align:center;}
+      .gym-img-slider-wrap{
+        .slider-main{width:100%;}
+        .slider-nav{
+          margin:0 auto;margin-top:20px;width:88%;
+          .slick-slide{margin:0 10px;cursor: pointer;}
+          .slick-slide{
+            > div{
+              position:relative;
+              img{opacity:0.4;}
+            }
+          }
+          .slick-current{
+            > div{
+              img{opacity:1;}
+              &:after{position: absolute;left:0;top:0;content:'';display:inline-block;width:100%;height:100%;border:5px solid #bd2731;box-sizing:border-box;}
+            }
+          }
+          .slick-arrow{
+            position: absolute;top:50%;margin-top:-12px;padding:0 16px;cursor:pointer;text-indent:-99999px;
+            &.slick-prev{
+              left:-70px;
+              background:url('../../images/pc/ico_arrow_prev.png') no-repeat center center;
+            }
+            &.slick-next{
+              right:-70px;
+              background:url('../../images/pc/ico_arrow_next.png') no-repeat center center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 채용지원
+.recruit-wrap{
+  margin-top:100px;padding-bottom:130px;
+  .recruit-txt-wrap{
+    width:calc(1200/1920*100%);margin:0 auto;
+    .recruit-tit{
+      padding-bottom:72px;text-align:center;
+      .tit{font-size:60px;font-weight:700;}
+      .sub-tit{margin-top:25px;display:inline-block;font-size:20px;line-height:36px;}
+    }
+    .recruit-info-wrap{
+      margin-top:76px;
+      &:first-child{margin-top:80px;}
+      .tit{margin-bottom:27px;font-size:24px;font-weight:700;}
+      .sub-tit{margin-bottom:13px;font-size:20px;font-weight:700;}
+      .txt{font-size:20px;}
+      span.txt{display:inline-block;}
+      dl{
+        dt{
+          margin-top:22px;
+          &:first-child{margin-top:0;}
+        }
+      }
+    }
+    .recruit-etc{
+      margin-top:70px;
+      .txt{display:block;font-size:20px;line-height:36px;}
+    }
+  }
+  .recruit-bg{
+    height:480px;
+    background:url('../../images/pc/bg_consulting.jpg') no-repeat center center;
+  }
+}
+
+// SM 스포츠 인재 양성소
+.center-info-wrap{
+  .info-txt-wrap{
+    width:calc(1200/1920*100%);margin:0 auto;margin-top:105px;padding:10px 0 126px;
+    background:url('../../images/pc/img_center_info.png') no-repeat top right;
+    .tit{margin-bottom:22px;font-family: 'Anton';font-size:60px;}
+    .txt-box{
+      width:49%; 
+      p{font-size:20px;line-height:36px;word-break:keep-all;word-wrap:break-word;}
+      p + p{margin-top:22px;}
+    }
+  }
+
+  .center-info-tab-wrap{
+    .tab-wrap{width:calc(1200/1920*100%);margin:0 auto;margin-bottom:120px;}
+    .tab-cont{
+      display:none;
+      &.on{display:block;} 
+      .tab-inner{
+        width:calc(1200/1920*100%);margin:0 auto;
+        .video-box{position:relative;width:100%;padding-bottom:56.25%;height:0;}
+        .video{position: absolute; top:0; left: 0; width: 100%; height: 100%;}
+      }
+    }
+  }
+  .leader-txt{
+    padding:70px 0;
+    .tit{float:left;width:35%;font-size:40px;font-weight:700;line-height:60px;}
+    .txt{float:left;width:65%;display:block;font-size:20px;line-height:36px;word-break:keep-all;word-wrap:break-word;}
+  }
+  .leader-step{
+    margin-top:80px;
+    .sub-tit{margin-bottom:10px;display:block;font-size:24px;}
+    .tit{font-size:40px;font-weight:700;}
+    .txt{margin-top:45px;margin-bottom:72px;font-size:20px;line-height:36px;word-break:keep-all;word-break:break-word;}    .step-list{
+      margin-top:54px;
+      dt{margin-bottom:20px;font-size:24px;font-weight:700;}
+      dd{padding-right:16%;font-size:20px;line-height:36px;word-break:keep-all;word-wrap:break-word;}
+      dt + dd{margin-bottom:50px;}
+      .step-etc{padding-right:0;margin-bottom:0;}
+    }
+    .leader-info-box-wrap{
+      *[class*="info-box"]{
+        padding-right:18%;float: left;width:49%;height:460px;box-sizing:border-box;background-size:100% 100%!important;
+        padding-top:70px;padding-left:6%;
+        .info-tit-wrap{
+          .sub-txt{margin-bottom:2px;display:block;font-size:20px;line-height:1.15;}
+          .info-tit{font-size:40px;font-weight:700;line-height:1.15;}
+          &:after{margin-top:25px;content:'';display:block;width:30px;height:2px;background:#fff;}
+        }
+        .txt{margin-top:22px;margin-bottom:0;font-size:16px;line-height:28px;word-break:keep-all;word-wrap:break-word;color:#ccc;}
+      }
+      .info-box01{background:url('../../images/pc/bg_leader01.jpg') no-repeat center center;}
+      .info-box02{float:right;background:url('../../images/pc/bg_leader02.jpg') no-repeat center center;}
+      .info-box03{margin-top:2%;background:url('../../images/pc/bg_leader03.jpg') no-repeat center center;}
+      .info-box04{
+        padding-right:6%;margin-top:2%;float:right;background:url('../../images/pc/bg_leader04.jpg') no-repeat center center;
+        .info-tit-wrap{
+          &:after{margin-top:50px;}
+        }
+      }
+      .info-box05{background:url('../../images/pc/bg_leader05.jpg') no-repeat center center;}
+      .info-box06{float:right;background:url('../../images/pc/bg_leader06.jpg') no-repeat center center;}
+    }
+  }
+  .support-wrap{
+    margin-top:24px;padding:68px 0 68px 6%;border:1px solid #1b1b1b;box-sizing:border-box;
+    .tit{width:28%;float:left;font-size:40px;font-weight:700;}
+    .support-box-cont{
+      width:72%;float:left;
+      .support-box{
+        float:left;position: relative; padding-left:24px;width:50%;box-sizing:border-box;
+        .box-tit{margin-bottom:10px;font-size:16px;}
+        .box-txt{display:block;font-size:20px;line-height:24px;}
+        &:before{position: absolute;top:1px;left:0;content:'';display:inline-block;width: 2px;height:50px;background:#fff;}
+      }
+    }
+  }
+  .leader-txt-wrap{
+    padding:115px 0 70px;text-align:center;
+    .leader-txt-tit{
+      position: relative;margin-bottom:30px; 
+      .tit{font-size:40px;font-weight:700;}
+      .sub-tit{margin:20px 0 35px;display:block;font-size:24px;}
+      &:after{content:'';display:block;margin:0 auto;width:2px;height:50px;background:#fff;}
+    }
+    .txt{font-size:20px;line-height:36px;}
+  }
+
+  .info-bottom{
+    height:300px;
+    background:url('../../images/pc/bg_center_info_bottom.jpg') no-repeat center center;
+    .txt-wrap{
+      padding-top:85px;width:calc(1200/1920*100%);margin:0 auto;
+      .tit{font-size:40px;font-weight:700;line-height:50px;text-align:center;}
+      .btn-wrap{margin-top:23px;}
+    }
+  }
+
+}
+
+// 선수단 소개 슬라이드
+.box-team-wrap{
+  margin-top:160px;padding-bottom:160px;height:1060px;background:#111;box-sizing:border-box;
+  .box-team-inner{position:relative;width:calc(1200/1920*100%);margin:0 auto;}
+  .box-team-tit-wrap{
+    position:absolute;left:0;top:158px;
+    .tit{        
+      font-size:36px;line-height:40px; 
+      &:after{margin-top:35px;content:'';display:block;width:40px;height:5px;background:#fff;}
+    }
+  }
+  .box-team-slider{
+    .box-team-slider-main{
+      *[class*="slider-box"]{
+        padding-top:287px;min-height:765px;box-sizing:border-box;
+        .box-tit{font-size:100px;font-weight:700;letter-spacing:-2.5px;}
+        .box-record{margin-top:30px;width:500px;padding:35px 0 30px 40px;display:inline-block;border:1px solid #222;box-sizing:border-box;}
+        .record-list{            
+          dt{margin-bottom:12px;font-size:24px;line-height:30px;font-weight:700;letter-spacing:-2.3px;}
+          dd{
+            padding-left:10px;position:relative;font-size:16px;line-height:30px;letter-spacing:-1px;
+            &:before{
+              position:absolute;left:0;top:50%;margin-top:-2px;
+              content:'';display:inline-block;width:4px;height:4px;background:#fff;border-radius:50%;
+            }
+          }
+        }
+        .bx-motto{
+          position: absolute;top:175px;right:140px;
+          .tit{margin-bottom:5px;display:block;font-size:16px;}
+          .txt{font-size:24px;line-height:36px;font-weight:700;}
+        }
+      }
+      .slider-box01{background:url('../../images/pc/img_team01.png') no-repeat top 155px right 130px;}
+      .slider-box02{background:url('../../images/pc/img_team02.png') no-repeat top 140px right 105px;}
+      .slider-box03{background:url('../../images/pc/img_team03.png') no-repeat top 140px right 85px;}
+      .slider-box04{background:url('../../images/pc/img_team04.png') no-repeat top 140px right 210px;}
+      .slider-box05{background:url('../../images/pc/img_team05.png') no-repeat top 140px right 160px;}
+      .slider-box06{background:url('../../images/pc/img_team06.png') no-repeat top 150px right 215px;}
+      .slider-box07{background:url('../../images/pc/img_team07.png') no-repeat top 140px right 220px;}
+    }
+    .box-team-slider-nav{
+      width:88%;margin:0 auto;
+      .slick-arrow{
+        position: absolute;top:50%;margin-top:-12px;padding:0 16px;cursor:pointer;text-indent:-99999px;
+        &.slick-prev{
+          left:-70px;
+          background:url('../../images/pc/ico_arrow_prev.png') no-repeat center center;
+        }
+        &.slick-next{
+          right:-70px;
+          background:url('../../images/pc/ico_arrow_next.png') no-repeat center center;
+        }
+      }
+      .slick-current{          
+        *[class*="team-thum"]{
+          opacity:1; border:5px solid #bd2731; box-sizing:border-box;
+        }
+      }
+      *[class*="team-thum"]{
+        width:340px;height:134px;opacity:0.5;
+      }
+      .team-thum01{background:url('../../images/pc/thum_team01.jpg') no-repeat top center;}
+      .team-thum02{background:url('../../images/pc/thum_team02.jpg') no-repeat top center;}
+      .team-thum03{background:url('../../images/pc/thum_team03.jpg') no-repeat top center;}
+      .team-thum04{background:url('../../images/pc/thum_team04.jpg') no-repeat top center;}
+      .team-thum05{background:url('../../images/pc/thum_team05.jpg') no-repeat top center;}
+      .team-thum06{background:url('../../images/pc/thum_team06.jpg') no-repeat top center;}
+      .team-thum07{background:url('../../images/pc/thum_team07.jpg') no-repeat top center;}
+    }
+    
+  }
+}

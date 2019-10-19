@@ -1,0 +1,70 @@
+extends ../../_src/_pug/_extend_html5
+
+//- layout 에서 선언한 공통적인 title 값이 맨뒤에 들어 감.
+block title
+	title #{metaTitle_main} #{title}
+	//- 뎁스별로 경로 바꿀때
+	- var url_css_0 = url_css_2;
+	- var url_js_0 = url_js_2;
+	- var url_img_common_0 = url_img_common_2;
+
+block keywords&description
+	meta(name="keywords" content=`${metaKeywords_main}`)
+	meta(name="description" content=`${metaDescription_main}`)
+
+block property
+	meta(property="og:title" content=`${ogTitle_main}`)
+	meta(property="og:url" content=`${ogUrl_main}`)
+	meta(property="og:image" content=`${ogImage_main}`)
+	meta(property="og:description" content=`${ogDescription_main}`)
+
+append css
+
+block vars
+	- var bodyClass = 'ui_dep2'
+	- var wrapClass = ''
+
+block contents
+	#container
+		#content(role='main')
+			// 2dep 탭 영역
+			.dep2-wrap
+				label(for="dep2")
+				select(name="dep2" id="dep2")
+					option(selected="selected") 정통복싱
+					option 다이어트 복싱
+					option 개인 P.T
+					option 키즈복싱
+
+			// full 영역일 경우
+			.cont
+				// full bg 영역
+				.program-wrap
+					//비디오 영역
+					.program-video-bg
+						.program-video-wrap
+							.video-box
+								<iframe class="video" width="320" height="180" src="https://www.youtube.com/embed/VUigoI2lh4w?autoplay=1" frameborder="0" allowfullscreen></iframe>
+
+
+					// 텍스트 영역
+					.program-txt-wrap
+						// 타이틀
+						p.program-tit 정통복싱 프로그램
+						// 이미지
+						img(src="../../images/pc/img_pro01.jpg", alt="정통복싱 프로그램").img-pc
+						// 컨텐츠 텍스트
+						.program-txt-cont.clfix
+							.l-wrap
+								p.sub-tit 프로/아마 선수육성,<br>정통 실전 복싱
+							.r-wrap
+								span.txt 실전에서 사용되는 복싱 기술들을 배울 수 있는 프로그램, 기본기부터 고급 테크닉들을 전문적인 지식과 실전경험이 농후한 전,현직 선수 출신의 지도진이 수련자의 눈높이에서 쉽고 재미있게 지도합니다. 기술훈련, 샌드백 훈련, 스파링, 미트(패드) 트레이닝 등이 포함되어있습니다.<br>복싱의 깊은 맛을 알 수 있는 SM복싱클럽의 대표적인 프로그램입니다.
+								em.etc-txt - 남녀노소 누구나 수련 가능 (8세부터)
+
+							
+
+
+
+
+append script
+	script.
