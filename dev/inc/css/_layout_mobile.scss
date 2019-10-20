@@ -672,7 +672,6 @@
     .gym-photo-wrap{
       padding-top:35px;
       .tit{margin-bottom:25px;font-size:28px;font-weight:700;text-align:center;}
-      .gym-img-swiper-wrap{}
     }
   }
 }
@@ -753,3 +752,41 @@
 
   }
 }
+<<<<<<< Updated upstream
+=======
+
+// 채용지원
+.recruit-wrap{
+  margin-top:100px;padding-bottom:130px;
+  .recruit-txt-wrap{
+    margin:0 20px;
+    .recruit-tit{
+      padding-bottom:72px;text-align:center;
+      .tit{font-size:40px;font-weight:700;}
+      .sub-tit{margin-top:25px;display:inline-block;font-size:20px;line-height:36px;}
+    }
+    .recruit-info-wrap{
+      margin-top:76px;
+      &:first-child{margin-top:80px;}
+      .tit{margin-bottom:27px;font-size:24px;font-weight:700;}
+      .sub-tit{margin-bottom:13px;font-size:20px;font-weight:700;}
+      .txt{font-size:20px;}
+      span.txt{display:inline-block;}
+      dl{
+        dt{
+          margin-top:22px;
+          &:first-child{margin-top:0;}
+        }
+      }
+    }
+    .recruit-etc{
+      margin-top:70px;
+      .txt{display:block;font-size:20px;line-height:36px;}
+    }
+  }
+  .recruit-bg{
+    height:480px;
+    background:url('../../images/pc/bg_consulting.jpg') no-repeat center center;
+  }
+}
+>>>>>>> Stashed changes
