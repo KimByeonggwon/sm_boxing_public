@@ -1,5 +1,5 @@
 @charset "utf-8";
-
+.test{}
 /*! header */
 #header{
   background:#000;
@@ -79,12 +79,12 @@
 }
 
 .dep2-wrap{
-  margin:0 auto;width:384px;  
+  margin:0 auto;width:384px;
   .ui-selectmenu-button.ui-button{
     position:relative;margin-right:0;padding:0 32px;width:384px;height:96px;font-size:28px;line-height:96px;font-weight:700;color:#fff;background:#000;border:none;box-sizing:border-box;
     &:focus{
       outline:none;
-    } 
+    }
   }
   .ui-menu .ui-menu-item{background:#000;}
   .ui-selectmenu-text{margin-right:0;}
@@ -184,7 +184,7 @@
         }
       }
       .red-box{
-        padding:64px 82px 0;margin-top:28px; 
+        padding:64px 82px 0;margin-top:28px;
         width:588px;height:420px;background:rgba(189,39,49,0.85);box-sizing:border-box;
         .box-tit{
           font-size:36px;line-height:48px;
@@ -230,7 +230,7 @@
       position: relative;
       .tit{font-family: 'Anton';font-size:60px;line-height:80px;}
       .txt{font-size:20px;line-height:36px;word-break:keep-all;word-wrap:break-word;}
-    }  
+    }
     .cont-gym01{
       padding-top:613px;margin-bottom:130px;
       &:after{
@@ -253,7 +253,7 @@
           float:left;display:block;width:49%;
           &:last-child{float:right;}
         }
-        
+
       }
     }
     .gym-info-img-wrap{
@@ -312,7 +312,7 @@
                 img{
                   float:left;width:49%;height:162px;
                   &:last-child{float: right;}
-                }                
+                }
               }
             }
           }
@@ -349,7 +349,7 @@
         &::before{position:absolute;left:50%;bottom:-112px;margin-left:-2.5px;content:'';display:inline-block;width:5px;height:80px;background:#fff;}
       }
       .txt05{top:523px;}
-    }    
+    }
   }
 }
 
@@ -371,7 +371,7 @@
       .sub-tit{font-size:40px;font-weight:bold;word-break:keep-all;word-wrap: break-word;}
       .txt{display:inline-block;font-size:20px;line-height:36px;word-break:keep-all;word-wrap: break-word;}
       .etc-txt{display:inline-block;margin-top:50px;  font-size:16px;}
-      
+
     }
   }
 }
@@ -450,7 +450,7 @@
 				padding-left:calc(115/1200*100%);padding-right:calc(115/1200*100%);
 				cursor: pointer;
 				&:before{
-					position: absolute;right:10%;top:31px; 
+					position: absolute;right:10%;top:31px;
 					content:'';display:inline-block;width:14px;height:8px; background:url('../../images/pc/ico_fold.png') no-repeat center top;
 				}
 				.fold-icon{top:22px;}
@@ -475,7 +475,7 @@
 	}
 }
 
-.community-wrap + .btn-wrap{margin:60px 0 140px;} 
+.community-wrap + .btn-wrap{margin:60px 0 140px;}
 
 // 버튼
 .btn-wrap{
@@ -490,7 +490,7 @@
 .tab-wrap{
   .tab-list{
     li{
-      float:left;position:relative; 
+      float:left;position:relative;
       a{
         padding:22px 0;
         display:block;text-align:center;border-bottom:2px solid #333;box-sizing:border-box;
@@ -526,11 +526,11 @@
       }
       .map-txt-wrap{padding:0 18px;margin-top:32px;}
       .map-tit-wrap{
-        position: relative; 
+        position: relative;
         .bold{font-weight:700;}
         span,em{display:inline-block;font-size:28px;}
         .sns-wrap{
-          position: absolute;right:0;top:-2px; 
+          position: absolute;right:0;top:-2px;
           .btn-sns{
             margin-left:10px;display:inline-block;width:40px;height:40px;font-size:0;
             &.youtube{background:url('../../images/pc/ico_youtube.png') no-repeat center top;}
@@ -660,7 +660,9 @@
     background:url('../../images/pc/img_center_info.png') no-repeat top right;
     .tit{margin-bottom:22px;font-family: 'Anton';font-size:60px;}
     .txt-box{
-      width:49%; 
+      width:49%;
+      background-color: #000;
+      padding-right: 20px;
       p{font-size:20px;line-height:36px;word-break:keep-all;word-wrap:break-word;}
       p + p{margin-top:22px;}
     }
@@ -670,7 +672,7 @@
     .tab-wrap{width:calc(1200/1920*100%);margin:0 auto;margin-bottom:120px;}
     .tab-cont{
       display:none;
-      &.on{display:block;} 
+      &.on{display:block;}
       .tab-inner{
         width:calc(1200/1920*100%);margin:0 auto;
         .video-box{position:relative;width:100%;padding-bottom:56.25%;height:0;}
@@ -734,7 +736,7 @@
   .leader-txt-wrap{
     padding:115px 0 70px;text-align:center;
     .leader-txt-tit{
-      position: relative;margin-bottom:30px; 
+      position: relative;margin-bottom:30px;
       .tit{font-size:40px;font-weight:700;}
       .sub-tit{margin:20px 0 35px;display:block;font-size:24px;}
       &:after{content:'';display:block;margin:0 auto;width:2px;height:50px;background:#fff;}
@@ -760,8 +762,8 @@
   .box-team-inner{position:relative;width:calc(1200/1920*100%);margin:0 auto;}
   .box-team-tit-wrap{
     position:absolute;left:0;top:158px;
-    .tit{        
-      font-size:36px;line-height:40px; 
+    .tit{
+      font-size:36px;line-height:40px;
       &:after{margin-top:35px;content:'';display:block;width:40px;height:5px;background:#fff;}
     }
   }
@@ -771,7 +773,7 @@
         padding-top:287px;min-height:765px;box-sizing:border-box;
         .box-tit{font-size:100px;font-weight:700;letter-spacing:-2.5px;}
         .box-record{margin-top:30px;width:500px;padding:35px 0 30px 40px;display:inline-block;border:1px solid #222;box-sizing:border-box;}
-        .record-list{            
+        .record-list{
           dt{margin-bottom:12px;font-size:24px;line-height:30px;font-weight:700;letter-spacing:-2.3px;}
           dd{
             padding-left:10px;position:relative;font-size:16px;line-height:30px;letter-spacing:-1px;
@@ -808,7 +810,7 @@
           background:url('../../images/pc/ico_arrow_next.png') no-repeat center center;
         }
       }
-      .slick-current{          
+      .slick-current{
         *[class*="team-thum"]{
           opacity:1; border:5px solid #bd2731; box-sizing:border-box;
         }
@@ -824,6 +826,6 @@
       .team-thum06{background:url('../../images/pc/thum_team06.jpg') no-repeat top center;}
       .team-thum07{background:url('../../images/pc/thum_team07.jpg') no-repeat top center;}
     }
-    
+
   }
 }
