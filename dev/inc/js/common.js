@@ -348,7 +348,13 @@
 	// 2dep 메뉴
 	var depFunc = function () {
 		function init () {
-			$( "#dep2" ).selectmenu();
+			$( "#dep2" ).selectmenu({
+				change: function() {
+					if($(this).val() != '') {
+							window.location = $(this).val();
+					}
+				}
+			});
 		}
 		return {
 			init : init
