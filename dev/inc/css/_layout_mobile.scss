@@ -752,25 +752,23 @@
 
   }
 }
-<<<<<<< Updated upstream
-=======
 
 // 채용지원
 .recruit-wrap{
-  margin-top:100px;padding-bottom:130px;
+  padding-bottom:40px;
   .recruit-txt-wrap{
     margin:0 20px;
     .recruit-tit{
-      padding-bottom:72px;text-align:center;
-      .tit{font-size:40px;font-weight:700;}
-      .sub-tit{margin-top:25px;display:inline-block;font-size:20px;line-height:36px;}
+      padding-bottom:35px;text-align:center;
+      .tit{font-size:40px;font-weight:700;word-break:keep-all;word-wrap:break-word;}
+      .sub-tit{margin-top:25px;display:inline-block;font-size:16px;line-height:24px;word-break:keep-all;word-wrap:break-word;}
     }
     .recruit-info-wrap{
-      margin-top:76px;
-      &:first-child{margin-top:80px;}
-      .tit{margin-bottom:27px;font-size:24px;font-weight:700;}
-      .sub-tit{margin-bottom:13px;font-size:20px;font-weight:700;}
-      .txt{font-size:20px;}
+      margin-top:50px;
+      &:first-child{margin-top:40px;}
+      .tit{margin-bottom:14px;font-size:20px;font-weight:700;}
+      .sub-tit{margin-bottom:12px;font-size:16px;font-weight:700;}
+      .txt{font-size:16px;word-break:keep-all;word-wrap:break-word;}
       span.txt{display:inline-block;}
       dl{
         dt{
@@ -780,13 +778,12 @@
       }
     }
     .recruit-etc{
-      margin-top:70px;
-      .txt{display:block;font-size:20px;line-height:36px;}
+      margin-top:50px;
+      .txt{display:block;font-size:16px;line-height:24px;}
     }
   }
   .recruit-bg{
-    height:480px;
-    background:url('../../images/pc/bg_consulting.jpg') no-repeat center center;
+    height:240px;
+    background:url('../../images/mobiles/bg_consulting.jpg') no-repeat center center;background-size:100%;
   }
 }
->>>>>>> Stashed changes
