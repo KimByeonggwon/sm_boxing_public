@@ -107,6 +107,7 @@
 			registUI('.ui_fold', accordianFunc, false);
 			registUI('.ui_tab', tabFunc, false);
 			registUI('.ui_dep2', depFunc, false);
+			
 
 			// 공통 적용
 			textPlaceHolderInit(); // ie7,8 가능한 placeholder
@@ -234,6 +235,7 @@
 
 	// footer include
 	var footer = (function(){
+		console.log('footer');
 		var el;
 
 		function init(){
@@ -265,6 +267,45 @@
 		return {init: init};
 	})();
 
+
+	function header_event(){
+		var windowWidth = $( window ).width(),
+				$header = $('.header-content');
+		if(windowWidth < 1024) {
+			// mo일 경우
+			//창 가로 크기가 1024 미만일 경우
+			$header.addClass('mo');
+			$header.removeClass('pc');
+
+			$(".mo-menu").click( function(e) {
+				e.preventDefault;
+				$(this).css({'display':'none'});
+				$(this).parents('#header').addClass('on');
+
+				$('.gnb-wrap').css({'display':'block'});
+			});
+
+			$('.close').click(function(e){
+				e.preventDefault;
+				$(this).parents('#header').removeClass('on');
+				$('.gnb-wrap').css({'display':'none'});
+				$('.mo-menu').css({'display':'block'});
+				
+			});
+		} else {
+			// pc일 경우
+			//창 가로 크기가 1024보다 클 경우
+			$header.addClass('pc');
+			$header.removeClass('mo');
+		}
+	}
+	$(window).on('load', function () {
+    header_event();
+	});
+		
+	$(window).on('resize', function () {
+		header_event();
+	});
 
 	// 아코디언
 	var accordianFunc = function () {
@@ -360,6 +401,12 @@
 			init : init
 		}
 	}
+
+
+	
+
+	
+
 
 	// window.onload = function(){
 
