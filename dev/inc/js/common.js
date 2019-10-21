@@ -272,8 +272,7 @@
 		var windowWidth = $( window ).width(),
 				$header = $('.header-content');
 		if(windowWidth < 1024) {
-			// mo일 경우
-			//창 가로 크기가 1024 미만일 경우
+			// mo
 			$header.addClass('mo');
 			$header.removeClass('pc');
 
@@ -294,7 +293,6 @@
 			});
 		} else {
 			// pc일 경우
-			//창 가로 크기가 1024보다 클 경우
 			$header.addClass('pc');
 			$header.removeClass('mo');
 		}
