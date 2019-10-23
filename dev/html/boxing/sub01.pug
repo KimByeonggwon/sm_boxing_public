@@ -19,6 +19,7 @@ block property
 	meta(property="og:description" content=`${ogDescription_main}`)
 
 append css
+	link(href=`${url_css_0}category.css`, type='text/css', rel='stylesheet')
 //- 	style.
 //- 		html{font-size:24px;}
 //- 		.aaa div{font-size:1.8rem;}
@@ -33,39 +34,6 @@ block vars
 
 block contents
 	#container
+
 		#content(role='main')
-			// 2dep 탭 영역
-			.dep2-wrap
-				label(for="dep2")
-				select(name="dep2" id="dep2")
-					option(selected="selected") 체육관목표
-					option 체육관소개
-					option 대표메시지
-
-			// full 영역일 경우
-			.cont.full
-				.cont.purpose-wrap
-					.bg-purpose01
-						.txt-wrap
-							p.txt01.al-center 운동으로 감동을 전하다.
-					.bg-purpose02
-						.txt-wrap
-							p.txt02.al-left 운동을 통해<br>건강해지는 감동
-					.bg-purpose03
-						.txt-wrap
-							p.txt03.al-right 건강을 통해<br>변화되는 삶에 대한 감동
-					.bg-purpose04
-						.txt-wrap
-							p.txt04.al-left 변화된 삶들로<br>세상이 건강해지는 감동
-					.bg-purpose05
-						.txt-wrap.etc
-							span.etc-txt.al-center 운동으로 감동을 전하는 체육관
-							p.txt05.al-center SM복싱클럽
-							
-
-
-
-
-append script
-	script.
-	
+			| 컨텐츠 시작
