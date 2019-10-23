@@ -8,9 +8,16 @@
   &::before{position:absolute;left:0;top:88px;content:'';height:0; width:100%;display:block;background:#000;transition:height 0.3s ease-out;z-index:100;}
   // 236 px
   &:hover{
+<<<<<<< HEAD
     &::before{height:280px;transition:height 0.3 ease-in;}
     .header-content .gnb-wrap .gnb-dep2-wrap{visibility: visible;opacity: 1;}
   }  
+=======
+    &::before{position:absolute;left:0;top:88px;content:'';height:236px; width:100%;display:none;background:#000;transform: height 3s;}
+  }
+
+
+>>>>>>> master
   .mo-menu{display:none;}
 }
 .header-content{
@@ -838,4 +845,3 @@
 
   }
 }
-
