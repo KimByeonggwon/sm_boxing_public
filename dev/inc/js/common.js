@@ -319,16 +319,17 @@
 	var tabFunc = function () {
 		function init () {
 			var i,
-				tab_li = $('.tab-list li');
+					tab_li = $('.tab-list li'),
+					d_tab = $('.tab-cont');
 			for (i = 0; i < tab_li.length ; i++) {
 				(function (i) {
-					$(tab_li[i]).on('click', function (e) {
+					$(tab_li[i]).off('click').on('click', function (e) {
 						e.preventDefault();
 
 						$(tab_li).removeClass('on');
 						$(this).addClass('on');
 
-						var d_tab = $('.tab-cont');
+						
 						$(d_tab).removeClass('on');
 						$(d_tab[i]).addClass('on');
 
