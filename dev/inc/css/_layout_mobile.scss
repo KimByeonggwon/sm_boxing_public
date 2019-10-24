@@ -786,3 +786,40 @@
     background:url('../../images/mobile/bg_consulting.jpg') no-repeat center center;background-size:100%;
   }
 }
+
+
+
+
+//ooodd ceo추가
+
+
+.ceo-wrap {
+  margin:0 20px;
+  padding-top:30px;
+  .txt-wrap {
+    padding-top:30px;
+    p.tit { font-size:22px; font-weight:700; }
+    p.sub-txt {
+      margin-top: 30px; font-size:20px; line-height: 26px;
+      span { font-weight: 700;}
+    }
+    p.txt-end { font-size:22px; margin-top:30px; }
+  }
+}
+
+.ceo-full {
+  margin-top: 80px;
+  background:#1b1b1c url('../../images/pc/bg_ceo.jpg') no-repeat left top;
+  background-size: 140% auto;
+  .full-text-wrap {
+    margin: 0 20px;
+    p.full-tit { padding-top:80px; font-size:25px; letter-spacing: 1px; font-family: anton; }
+    ul.txt-list {
+      padding-top: 30px;
+      li {font-size:20px; line-height:27px;}
+    }
+    p.sub-txt { margin-top: 30px;  font-size:20px; line-height: 26px; padding-bottom:80px; }
+
+  }
+}
+.ceo-end { padding-bottom: 80px;}
