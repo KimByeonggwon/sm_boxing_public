@@ -78,8 +78,9 @@ gulp.task('html',
             }))
             .pipe(beautify({
                 "html": {
-									"indent_char": "\t",
-    							"indent_size": 1,
+                    "indent_char": "\t",
+                    "indent_size": 1,
+                    "unformatted":['p', 'span', 'sub', 'sup', 'b', 'i', 'u', 'em', 'br'],
 	                "inline": []
 								}
             }))

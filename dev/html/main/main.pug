@@ -204,31 +204,7 @@ block contents
 append script
 	script.
 		$(document).ready(function(){
-			 $('.ui-slider-for').slick({
-				slidesToShow: 1,
-				slidesToScroll: 1,
-				arrows: false,
-				fade: true,
-				setPosition : true,
-				asNavFor: '.ui-slider-nav'
-			});
-			$('.ui-slider-nav').slick({
-				slidesToShow: 3,				
-				slidesToScroll: 1,
-				asNavFor: '.ui-slider-for',
-				setPosition : true,
-				focusOnSelect: true,
-				responsive:[
-					{
-						breakpoint: 1024,
-						settings: {
-							arrows: false,
-							slidesToShow: 1
-						}
-					}
-				]
-			});
-			
+			// 메인 비쥬얼 슬라이드
 			$('.ui-slider-main').slick({
 				arrows: false,
 				dots: true,
@@ -237,4 +213,37 @@ append script
 				fade: true,
 				cssEase: 'linear'
 			});		
+
+
+			// 선수 슬라이드
+			 $('.ui-slider-for').slick({
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				arrows: false,
+				fade: true,
+				setPosition : true,
+				asNavFor: '.ui-slider-nav',
+				adaptiveHeight: true
+			});
+		
+			
+			$('.ui-slider-nav').slick({
+				slidesToShow: 3,				
+				slidesToScroll: 1,
+				asNavFor: '.ui-slider-for',
+				setPosition : true,
+				focusOnSelect: true,
+				adaptiveHeight: true,
+				responsive:[
+					{
+						breakpoint: 1024,
+						settings: {
+							arrows: true,
+							slidesToShow: 1
+						}
+					}
+				]
+			});
+			
+			
 		});

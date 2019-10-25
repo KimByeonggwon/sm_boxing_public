@@ -1,7 +1,5 @@
 @charset "utf-8";
 
-@import 'ceo';
-
 /*! header */
 #header{
   background:#000;
@@ -835,3 +833,36 @@
 
   }
 }
+
+
+.ceo-wrap {
+  letter-spacing:-1.5px;
+  width:calc(1200/1920*100%);margin:0 auto;
+  padding-top: 90px;
+  .txt-wrap {
+    word-break:keep-all;word-wrap: break-word;
+    p.tit { font-size:28px; font-weight:700; line-height:42px; }
+    p.sub-txt {
+      margin-top: 30px;  font-size:24px; line-height: 40px;
+      span { font-weight:700; }
+    }
+    p.txt-end { font-size:28px; margin-top:60px; }
+  }
+}
+
+.ceo-full {
+  width:100%;
+  margin-top:120px;
+  min-height:656px;
+  background:#1b1b1c url('../../images/pc/bg_ceo.jpg') no-repeat 90% top;
+  .full-text-wrap{
+    width:calc(1200/1920*100%);margin:0 auto;
+    p.full-tit { padding-top:80px; font-size:40px; font-family: anton; }
+    ul.txt-list {
+      padding-top: 30px;
+      li {font-size:24px; line-height:42px;}
+    }
+    p.sub-txt { margin-top: 30px;  font-size:24px; line-height: 40px; padding-bottom:100px; }
+  }
+}
+.ceo-end { padding-bottom: 140px;}
