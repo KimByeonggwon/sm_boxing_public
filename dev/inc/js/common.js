@@ -358,7 +358,8 @@
 		function init () {
 			var i,
 					tab_li = $('.tab-list li'),
-					d_tab = $('.tab-cont');
+					d_tab = $('.tab-cont'),
+					map_cont = $('.map-cont');
 			for (i = 0; i < tab_li.length ; i++) {
 				(function (i) {
 					$(tab_li[i]).off('click').on('click', function (e) {
@@ -366,8 +367,12 @@
 
 						$(tab_li).removeClass('on');
 						$(this).addClass('on');
+
 						$(d_tab).removeClass('on');
 						$(d_tab[i]).addClass('on');
+						
+						$(map_cont).removeClass('on');
+						$(map_cont[i]).addClass('on');
 
 						$('.ui-slider-for').slick('setPosition');
 						$('.ui-slider-nav').slick('setPosition');
@@ -397,61 +402,6 @@
 			init : init
 		}
 	}
-
-
-	
-
-	
-
-
-	// window.onload = function(){
-
-	// 	// 인천 지도
-	// 	// 4관
-	// 	var container4 = document.getElementById('map4');
-	// 	var options4 = {
-	// 		center: new kakao.maps.LatLng(37.46816303502205, 126.66930393328019),
-	// 		level: 3
-	// 	};
-		
-	// 	// 5관
-	// 	var container5 = document.getElementById('map5');
-	// 	var options5 = {
-	// 		center: new kakao.maps.LatLng(37.46726100579576, 126.70862316597363),
-	// 		level: 3
-	// 	};
-
-	// 	// 6관
-	// 	var container6 = document.getElementById('map6');
-	// 	var options6 = {
-	// 		center: new kakao.maps.LatLng(37.502571824190426, 126.71395518211769),
-	// 		level: 3
-	// 	};
-
-	// 	// 7관
-	// 	var container7 = document.getElementById('map7');
-	// 	var options7 = {
-	// 		center: new kakao.maps.LatLng(37.4550396493689, 126.7282594765901),
-	// 		level: 3
-	// 	};
-
-	// 	// 8관
-	// 	var container8 = document.getElementById('map8');
-	// 	var options8 = {
-	// 		center: new kakao.maps.LatLng(37.44315800775223, 126.73661500333887),
-	// 		level: 3
-	// 	};
-
-		
-
-	// 	var map4 = new kakao.maps.Map(container4, options4);
-	// 	var map5 = new kakao.maps.Map(container5, options5);
-	// 	var map6 = new kakao.maps.Map(container6, options6);
-	// 	var map7 = new kakao.maps.Map(container7, options7);
-	// 	var map8 = new kakao.maps.Map(container8, option80);	
-	// }
-
-
 
 
 }(jQuery);

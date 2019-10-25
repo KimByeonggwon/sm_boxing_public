@@ -74,6 +74,7 @@
 }
 /*! 공통 */
 .cont{ min-height:calc(100vh - 264px);}
+.cont.etc{ min-height:auto;}
 .main,.cont{
   width:100%;
   img{width:100%;}
@@ -521,14 +522,23 @@
 .find-gym-cont{
   width:calc(1200/1920*100%);margin:0 auto;padding-bottom:100px;
   > .tab-wrap{padding-top:45px;}
+  .map-cont{
+    width:100%;height:640px;margin-top:50px;
+    position:absolute;left:-1000px;top:-1000px;z-index:-1;
+    &.on{
+      position:static;display:block;z-index:5
+    }
+    *[id*="map"]{
+      width:100%;height:640px;
+    }
+  }
+  
   .tab-cont{
-    display:none;
-    &.on{position:static;display:block;}
+    display:none;    
+    &.on{display:block;z-index:1;}
     .gym-map-wrap{
       padding-bottom:50px;border-bottom:1px solid #333;
-      .map-cont{
-        width:100%;height:640px;margin-top:50px;
-      }
+      
       .map-txt-wrap{padding:0 18px;margin-top:32px;}
       .map-tit-wrap{
         position: relative;

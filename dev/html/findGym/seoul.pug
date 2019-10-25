@@ -33,7 +33,7 @@ block contents
 				select(name="dep2" id="dep2")
 					option(selected="selected" value="../findGym/seoul.html") 서울
 					option(value="../findGym/incheon.html") 인천
-			.cont
+			.cont.etc
 				.find-gym-cont
 					.tab-wrap
 						ul.tab-list.tab05.clfix
@@ -52,13 +52,24 @@ block contents
 							li
 								a(href="#")
 									span 10관
-					
+
+
+					.map-cont.on
+						#map1
+					.map-cont
+						#map2
+					.map-cont
+						#map3
+					.map-cont
+						#map9
+					.map-cont
+						#map10
 
 					// 1관
 					.tab-cont.on
 						.gym-map-wrap
 							// 지도 영역
-							#map1.map-cont
+							
 							
 							.map-txt-wrap
 								.map-tit-wrap
@@ -97,7 +108,7 @@ block contents
 					.tab-cont
 						.gym-map-wrap
 							// 지도 영역
-							#map2.map-cont
+							//- #map2.map-cont
 
 							.map-txt-wrap
 								.map-tit-wrap
@@ -145,7 +156,7 @@ block contents
 					.tab-cont
 						.gym-map-wrap
 							// 지도 영역
-							#map3.map-cont
+							//- #map3.map-cont
 
 							.map-txt-wrap
 								.map-tit-wrap
@@ -195,7 +206,7 @@ block contents
 						.gym-map-wrap
 
 							// 지도 영역
-							#map9.map-cont
+							//- #map9.map-cont
 
 							.map-txt-wrap
 								.map-tit-wrap
@@ -243,7 +254,7 @@ block contents
 					.tab-cont
 						.gym-map-wrap
 							// 지도 영역
-							#map10.map-cont
+							//- #map10.map-cont
 
 							.map-txt-wrap
 								.map-tit-wrap
@@ -313,8 +324,8 @@ append script
 					{
 						breakpoint: 1024,
 						settings: {
-							arrows: false,
-							slidesToShow: 1
+							arrows: true,
+							slidesToShow: 2
 						}
 					}
 				]
@@ -325,7 +336,7 @@ append script
 			var options1 = {
 				center: new kakao.maps.LatLng(37.53611899611797, 126.86374733091611),
 				level: 3
-			};		
+			};
 
 			// 2관
 			var container2 = document.getElementById('map2');
@@ -333,6 +344,7 @@ append script
 				center: new kakao.maps.LatLng(37.548469045815835, 126.86616011591776),
 				level: 3
 			};
+
 
 			// 3관
 			var container3 = document.getElementById('map3');
@@ -393,6 +405,31 @@ append script
 			marker9.setMap(map9);
 			marker10.setMap(map10);
 
+			//- function setCenter() {
+				
+			//- 	var markerPosition1  = new kakao.maps.LatLng(37.53611899611797, 126.86374733091611); 
+			//- 	var markerPosition2  = new kakao.maps.LatLng(37.548469045815835, 126.86616011591776); 
+			//- 	var markerPosition3  = new kakao.maps.LatLng(37.525927567070035, 126.86124536212441); 
+			//- 	var markerPosition9  = new kakao.maps.LatLng(37.53722162216685, 127.1233153292424); 
+			//- 	var markerPosition10  = new kakao.maps.LatLng(37.449377280998384, 126.91344080763992);
 
+			//- 	// 지도 중심을 이동 시킵니다
+			//- 	map1.setCenter(markerPosition10);
+			//- 	map2.setCenter(markerPosition2);
+			//- 	map3.setCenter(markerPosition3);
+			//- 	map9.setCenter(markerPosition9);
+			//- 	map10.setCenter(markerPosition10);
+			//- }
+			//- function setCenter() {
+			//- 	//- var markerPosition3  = new kakao.maps.LatLng(37.525927567070035, 126.86124536212441);
+			//- 	var moveLatLon = new kakao.maps.LatLng(37.525927567070035, 126.86124536212441);
+			//- 	map3.setCenter(moveLatLon);
+			//- }
+
+
+			//- $('.test').click(function(){
+			//- 	console.log('dddd');
+			//- 	setCenter();
+			//- });
 			
 		});
