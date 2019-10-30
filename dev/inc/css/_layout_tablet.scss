@@ -1,6 +1,7 @@
 @charset "utf-8";
 
-/*! header */
-/*! footer */
-/*! popup */
-/*! layout */
+
+.header-content{width:calc(1120/1280*100%);margin:0 auto;}
+.main-wrap .main-visual-wrap *[class*="visual-bx"] .txt-bx{width:calc(1120/1280*100%);margin:0 auto;}
+.main-wrap .main-cont .main-cont-inner{width:calc(1120/1280*100%);margin:0 auto;}
+.main-wrap .main-cont .box-team-wrap .box-team-inner{width:calc(1120/1280*100%);margin:0 auto;}

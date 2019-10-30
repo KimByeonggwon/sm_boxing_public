@@ -787,15 +787,16 @@
         }
       }
       *[class*="team-thum"]{
-        width:340px;height:100px;
+        opacity:0.5;
+        img{width:100%;}
       }
-      .team-thum01{background:url('../../images/pc/thum_team01.jpg') no-repeat center center;background-size:cover;}
-      .team-thum02{background:url('../../images/pc/thum_team02.jpg') no-repeat center center;background-size:cover;}
-      .team-thum03{background:url('../../images/pc/thum_team03.jpg') no-repeat center center;background-size:cover;}
-      .team-thum04{background:url('../../images/pc/thum_team04.jpg') no-repeat center center;background-size:cover;}
-      .team-thum05{background:url('../../images/pc/thum_team05.jpg') no-repeat center center;background-size:cover;}
-      .team-thum06{background:url('../../images/pc/thum_team06.jpg') no-repeat center center;background-size:cover;}
-      .team-thum07{background:url('../../images/pc/thum_team07.jpg') no-repeat center center;background-size:cover;}
+      // .team-thum01{background:url('../../images/pc/thum_team01.jpg') no-repeat center center;background-size:cover;}
+      // .team-thum02{background:url('../../images/pc/thum_team02.jpg') no-repeat center center;background-size:cover;}
+      // .team-thum03{background:url('../../images/pc/thum_team03.jpg') no-repeat center center;background-size:cover;}
+      // .team-thum04{background:url('../../images/pc/thum_team04.jpg') no-repeat center center;background-size:cover;}
+      // .team-thum05{background:url('../../images/pc/thum_team05.jpg') no-repeat center center;background-size:cover;}
+      // .team-thum06{background:url('../../images/pc/thum_team06.jpg') no-repeat center center;background-size:cover;}
+      // .team-thum07{background:url('../../images/pc/thum_team07.jpg') no-repeat center center;background-size:cover;}
     }
 
   }
