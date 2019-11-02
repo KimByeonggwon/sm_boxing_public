@@ -22,7 +22,7 @@
 
 
 // layout - tablet
-@media (min-width:1024px) and (max-width:1280px){
+@media (min-width:1024px) and (max-width:1440px){
 	// sass 에서 _를 넣지 않아도 컴파일을 한다.
 	// visual studio code 에서 cmd + click 해서 파일로 이동할때 import 파일이름에 _를 넣으면 오류가 난다.
 	@import 'layout_tablet';
