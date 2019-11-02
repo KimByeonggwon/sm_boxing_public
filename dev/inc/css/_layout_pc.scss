@@ -1,9 +1,9 @@
 @charset "utf-8";
 
-/*! header */
+/*! s : header */
 #header{
   background:#000;
-  &::before{position:absolute;left:0;top:88px;content:'';height:0; width:100%;display:block;background:#000;transition:height 0.3s ease-out;z-index:100;}
+  &::before{position:absolute;left:0;top:88px;content:'';height:0; width:100%;display:block;background:#000;transition:height 0.3s ease-out;z-index:150;}
   &:hover{
     &::before{height:200px;transition:height 0.3 ease-in;}
     .header-content .gnb-wrap .gnb-dep2-wrap{visibility: visible;opacity: 1;}
@@ -58,9 +58,9 @@
     }
   }
 }
+/*! e : header */
 
-
-/*! footer */
+/*! s : footer */
 #footer{
  background:#111; z-index:50;
   .footer_content{
@@ -72,7 +72,10 @@
     }
   }
 }
-/*! 공통 */
+/*! e : footer */
+
+
+/*! 공통 영역 */
 .cont{ min-height:calc(100vh - 264px);}
 .cont.etc{ min-height:auto;}
 .main,.cont{
@@ -113,11 +116,12 @@
   .ui-selectmenu-icon.ui-icon{transform:rotate( 180deg );}
 }
 
+
+// 메인
 .main #header{
   position: absolute;left:0;top:0;width:100%;background:rgba(0, 0, 0, 0.9);z-index:10;
   .header-content{background:none;}
 }
-// 메인
 .main-wrap{
   .main-visual-wrap{
     .visual-list{position:relative;}
@@ -368,7 +372,7 @@
   .video-box{position:relative;width:100%;padding-bottom:56.25%;height:0;}
   .video{position: absolute; top:132px; left: 0; width: 100%; height: 100%;}
   .program-txt-wrap{
-    width:calc(1200/1920*100%);margin:0 auto;margin-top:110px;
+    width:calc(1200/1920*100%);margin:0 auto;padding-top:110px;
     .program-tit{padding-bottom:75px;font-size:60px;font-weight: 700;text-align:center;}
     .program-txt-cont{
       margin-top:72px;
@@ -671,8 +675,8 @@
 // SM 스포츠 인재 양성소
 .center-info-wrap{
   .info-txt-wrap{
-    width:calc(1200/1920*100%);margin:0 auto;margin-top:105px;padding:10px 0 126px;
-    background:url('../../images/pc/img_center_info.png') no-repeat top right;
+    width:calc(1200/1920*100%);margin:0 auto;padding:115px 0 126px;
+    background:url('../../images/pc/img_center_info.png') no-repeat top 105px right;
     .tit{margin-bottom:22px;font-family: 'Anton';font-size:60px;}
     .txt-box{
       width:49%;
@@ -684,7 +688,7 @@
   }
 
   .center-info-tab-wrap{
-    .tab-wrap{width:calc(1200/1920*100%);margin:0 auto;margin-bottom:120px;}
+    .tab-wrap{width:calc(1200/1920*100%);margin:0 auto;padding-bottom:120px;}
     .tab-cont{
       display:none;
       &.on{display:block;}

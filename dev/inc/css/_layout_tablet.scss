@@ -1,7 +1,42 @@
 @charset "utf-8";
 
+$sm_tablet_w : calc(1120/1280*100%);
+$sm_tablet_mg : 0 auto;
 
-.header-content{width:calc(1120/1280*100%);margin:0 auto;}
-.main-wrap .main-visual-wrap *[class*="visual-bx"] .txt-bx{width:calc(1120/1280*100%);margin:0 auto;}
-.main-wrap .main-cont .main-cont-inner{width:calc(1120/1280*100%);margin:0 auto;}
-.main-wrap .main-cont .box-team-wrap .box-team-inner{width:calc(1120/1280*100%);margin:0 auto;}
+
+
+
+// header footer
+.header-content,
+#footer .footer_content{width:$sm_tablet_w;margin:$sm_tablet_mg;}
+
+// main
+.main-wrap .main-visual-wrap *[class*="visual-bx"] .txt-bx,
+.main-wrap .main-cont .main-cont-inner,
+.main-wrap .main-cont .box-team-wrap .box-team-inner{width:$sm_tablet_w;margin:$sm_tablet_mg;}
+
+// SM 복싱클럽
+.gym-info-wrap .gym-inner,
+.ceo-wrap,
+.ceo-full .full-text-wrap,
+.purpose-wrap .txt-wrap{width:$sm_tablet_w;margin:$sm_tablet_mg;}
+
+// 프로그램
+.program-wrap .program-video-wrap,
+.program-wrap .program-txt-wrap{width:$sm_tablet_w;margin:$sm_tablet_mg;}
+
+// SM스포츠 인재 양성소
+.center-info-wrap .info-txt-wrap,
+.center-info-wrap .center-info-tab-wrap .tab-wrap,
+.center-info-wrap .center-info-tab-wrap .tab-cont .tab-inner,
+.center-info-wrap .info-bottom .txt-wrap,
+.box-team-wrap .box-team-inner{width:$sm_tablet_w;margin:$sm_tablet_mg;}
+
+// 체육관찾기
+.find-gym-cont{width:$sm_tablet_w;margin:$sm_tablet_mg;}
+
+// 커뮤니티
+.community-wrap .community-cont{width:$sm_tablet_w;margin:$sm_tablet_mg;}
+
+// 제휴 컨설팅
+.recruit-wrap .recruit-txt-wrap{width:$sm_tablet_w;margin:$sm_tablet_mg;}
