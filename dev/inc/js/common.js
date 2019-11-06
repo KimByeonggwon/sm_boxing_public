@@ -376,7 +376,6 @@
 
 						$('.ui-slider-for').slick('setPosition');
 						$('.ui-slider-nav').slick('setPosition');
-
 					})
 				})(i);
 			}

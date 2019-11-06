@@ -341,7 +341,7 @@ append script
 			// 2관
 			var container2 = document.getElementById('map2');
 			var options2 = {
-				center: new kakao.maps.LatLng(37.548469045815835, 126.86616011591776),
+				center: new kakao.maps.LatLng(37.54846, 126.86616),
 				level: 3
 			};
 
@@ -363,7 +363,7 @@ append script
 			// 10관
 			var container10 = document.getElementById('map10');
 			var options10 = {
-				center: new kakao.maps.LatLng(37.449377280998384, 126.91344080763992),
+				center: new kakao.maps.LatLng(37.449930, 126.913096),
 				level: 3
 			};
 
@@ -373,12 +373,14 @@ append script
 			var map9 = new kakao.maps.Map(container9, options9);
 			var map10 = new kakao.maps.Map(container10, options10);
 
+
+
 			// 마커가 표시될 위치입니다 
 			var markerPosition1  = new kakao.maps.LatLng(37.53611899611797, 126.86374733091611); 
 			var markerPosition2  = new kakao.maps.LatLng(37.548469045815835, 126.86616011591776); 
 			var markerPosition3  = new kakao.maps.LatLng(37.525927567070035, 126.86124536212441); 
 			var markerPosition9  = new kakao.maps.LatLng(37.53722162216685, 127.1233153292424); 
-			var markerPosition10  = new kakao.maps.LatLng(37.449377280998384, 126.91344080763992);
+			var markerPosition10  = new kakao.maps.LatLng(37.449930, 126.913096);
 
 
 			// 마커를 생성합니다
@@ -405,31 +407,6 @@ append script
 			marker9.setMap(map9);
 			marker10.setMap(map10);
 
-			//- function setCenter() {
-				
-			//- 	var markerPosition1  = new kakao.maps.LatLng(37.53611899611797, 126.86374733091611); 
-			//- 	var markerPosition2  = new kakao.maps.LatLng(37.548469045815835, 126.86616011591776); 
-			//- 	var markerPosition3  = new kakao.maps.LatLng(37.525927567070035, 126.86124536212441); 
-			//- 	var markerPosition9  = new kakao.maps.LatLng(37.53722162216685, 127.1233153292424); 
-			//- 	var markerPosition10  = new kakao.maps.LatLng(37.449377280998384, 126.91344080763992);
-
-			//- 	// 지도 중심을 이동 시킵니다
-			//- 	map1.setCenter(markerPosition10);
-			//- 	map2.setCenter(markerPosition2);
-			//- 	map3.setCenter(markerPosition3);
-			//- 	map9.setCenter(markerPosition9);
-			//- 	map10.setCenter(markerPosition10);
-			//- }
-			//- function setCenter() {
-			//- 	//- var markerPosition3  = new kakao.maps.LatLng(37.525927567070035, 126.86124536212441);
-			//- 	var moveLatLon = new kakao.maps.LatLng(37.525927567070035, 126.86124536212441);
-			//- 	map3.setCenter(moveLatLon);
-			//- }
-
-
-			//- $('.test').click(function(){
-			//- 	console.log('dddd');
-			//- 	setCenter();
-			//- });
+			
 			
 		});
