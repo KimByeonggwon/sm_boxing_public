@@ -21,14 +21,18 @@ block property
 append css
 
 block vars
-	- var bodyClass = 'ui_tab'
+	- var bodyClass = 'ui_dep2 ui_tab'
 	- var wrapClass = ''
 
 block contents
 	#container
 		#content(role='main')
-			.dep2-wrap.no-select
-				p SM 스포츠 인재 양성소
+			// 2dep 탭 영역
+			.dep2-wrap.long
+				label(for="dep2")
+				select(name="dep2" id="dep2")
+					option(value="../trainingCenter/center_info.html") SM 스포츠 지도자 교육과정
+					option(selected="selected" value="../trainingCenter/center_info02.html") SM 복싱 선수단
 			.cont
 				.center-info-wrap
 					.info-txt-wrap
@@ -139,77 +143,41 @@ block contents
 										p.tit SM 복싱 선수단 소개
 									.box-team-slider
 										.box-team-slider-main.ui-slider-for
-											//- .slider-box01
-											//- 	p.box-tit 박지현 코치
-											//- 	.box-record
-											//- 		dl.record-list
-											//- 			dt 전적 : 27전 24승(6KO) 3패
-											//- 			dd (현) WBF 스트로급 세계 챔피언
-											//- 			dd (현) WIBF 스트로급 세계 챔피언
-											//- 			dd (현) WIBA 스트로급 세계 챔피언
-											//- 			dd (현) IFBA 스트로급 세계 챔피언
-											//- 	.bx-motto
-											//- 		span.tit 좌우명.
-											//- 		p.txt 꿈꿀 수 있는 자,<br>그 꿈을<br>이룰 수도 있다.
-
 											.slider-box02
-												p.box-tit 설민석 선수	
-												//- .box-record
-												//- 	dl.record-list
-												//-		dt 전적 : 5전 4승 1패
-												//-		dd 설민석(sm복싱) vs 서정원(전진만) 4R 판정승
-												//-		dd 설민석(sm복싱) vs 박건호(스피드) 4R 판정패
-												//-		dd 설민석(sm복싱) vs 양준모(대한권투) 4R 판정승
-												//-		dd 설민석(sm복싱) vs 양준모(대한) 2차전 4R 판정승
-												//-		dd 설민석(sm복싱) vs 지 승(더블비) 4R 판정승				
+												p.box-tit 설민석 선수
+												p.record 전적 : 5전 4승 1패
+												a(href="#pop01").btn-list.btn-pop
+													span 전적 자세히 보기
+												
 											.slider-box03
 												p.box-tit 유주안 선수
-												.box-record
-													dl.record-list
-														dt 전적 : 4전 2승(1KO) 2패
-														dd 유주안(sm복싱) vs 한윤태(대한) 4R 판정패
-														dd 유주안(sm복싱) vs 조종율(통진BMP) 1R KO승
-														dd 유주안(sm복싱) vs 전규범(브리드) 4R 판정패
-														dd 유주안(sm복싱) vs 윤원형(천안Beat) 4R 판정승								
+												p.record 전적 : 4전 2승(1KO) 2패
+												a(href="#pop02").btn-list.btn-pop
+													span 전적 자세히 보기
+																		
 											.slider-box04
 												p.box-tit 정태원 선수
-												.box-record
-													dl.record-list
-														dt 전적 : 4전 3승(1KO) 1패
-														dd 2017년도 KBF(한국권투연맹) 슈퍼페더급 신인왕
-														dd 정태원(sm복싱) vs 최성용(이철형체) 4R 판정승
-														dd 정태원(sm복싱) vs 이대영(인천연수) 4R 판정승
-														dd 정태원(sm복싱) vs 문국민(더원복싱) 3R KO승
-														dd 정태원(sm복싱) vs 김무현(더원복싱) 2R KO패								
+												p.record 전적 : 4전 3승(1KO) 1패
+												a(href="#pop03").btn-list.btn-pop
+													span 전적 자세히 보기
+												
 											.slider-box05
 												p.box-tit 양초록 선수
-												.box-record
-													dl.record-list
-														dt 전적 : 7전 3승(2KO) 3패 1무
-														dd 양초록(sm복싱) vs 채시원(평촌권투) 2R KO승
-														dd 양초록(sm복싱) vs 손정환(몬스터) 3R KO승
-														dd 양초록(sm복싱) vs 박준석(영복싱) 4R 판정패
-														dd 양초록(sm복싱) vs 이흑산(천안헐크) 4R 판정패
-														dd 양초록(sm복싱) vs 홍영우(구미거북) 4R 판정승								
+												p.record 전적 : 7전 3승(2KO) 3패 1무
+												a(href="#pop04").btn-list.btn-pop
+													span 전적 자세히 보기
+																						
 											.slider-box06
 												p.box-tit 홍예준 선수
-												.box-record
-													dl.record-list
-														dt 2019년 전국체전 서울시 대표 선수 (-81kg 일반)
-														dd 2018년 서울신인 선수권 대회 3위 -91kg
-														dd 2018년 전국 회장배 복싱대회 고등부 -81kg 8강
-														dd 2019년 전국 협회장배 복싱대회 대학부 -81kg 8강
-														dd 2019년 제100회 전국체전 서울대표 선발전 -81kg 1위
-														dd 2019년 전국 우승권 복싱대회 -91kg 2위
-														dd 2019년 제100회 전국체육대회 -81kg 8강
+												//- p.record 전적 : 7전 3승(2KO) 3패 1무
+												a(href="#pop05").btn-list.btn-pop
+													span 전적 자세히 보기
+												
 											.slider-box07
 												p.box-tit 김의영 선수
-												.box-record
-													dl.record-list
-														dt 2019년 전국 협회장배 복싱대회 +91kg<br>일반부 3위
-														dd 2019년 제100회 전국체전 대표 선발전 +91kg 2위
-														dd 2019년 전국 우승권 복싱대회 +91kg 우승(1위)
-
+												//- p.record 전적 : 7전 3승(2KO) 3패 1무
+												a(href="#pop06").btn-list.btn-pop
+													span 전적 자세히 보기
 										.box-team-slider-nav.ui-slider-nav
 											//- .team-thum01
 											//- 	img(src="../../images/pc/thum_team01.jpg")
@@ -239,8 +207,80 @@ block contents
 							.btn-wrap
 								a(href="#").btn-list
 									span.txt 자세히 보기
-
+		.box-record-pop#pop01
+			.txt-wrap
+				p.name 설민석 선수
+					em Pro
+				p.recored 전적 : 5전 4승 1패
+			ul.record-list
+				li 설민석(sm복싱) vs 서정원(전진만) 4R 판정승
+				li 설민석(sm복싱) vs 박건호(스피드) 4R 판정패
+				li 설민석(sm복싱) vs 양준모(대한권투) 4R 판정승
+				li 설민석(sm복싱) vs 양준모(대한) 2차전 4R 판정승
+				li 설민석(sm복싱) vs 지 승(더블비) 4R 판정승
+			a.og-close
+		.box-record-pop#pop02
+			.txt-wrap
+				p.name 유주안 선수
+					em Pro
+				p.recored 전적 : 4전 2승(1KO) 2패
+			ul.record-list
+				li 유주안(sm복싱) vs 한윤태(대한) 4R 판정패
+				li 유주안(sm복싱) vs 조종율(통진BMP) 1R KO승
+				li 유주안(sm복싱) vs 전규범(브리드) 4R 판정패
+				li 유주안(sm복싱) vs 윤원형(천안Beat) 4R 판정승
+			a.og-close
+		.box-record-pop#pop03
+			.txt-wrap
+				p.name 정태원 선수
+					em Pro
+				p.recored 전적 : 4전 3승(1KO) 1패
+			ul.record-list
+				li 2017년도 KBF(한국권투연맹) 슈퍼페더급 신인왕
+				li 정태원(sm복싱) vs 최성용(이철형체) 4R 판정승
+				li 정태원(sm복싱) vs 이대영(인천연수) 4R 판정승
+				li 정태원(sm복싱) vs 문국민(더원복싱) 3R KO승
+				li 정태원(sm복싱) vs 김무현(더원복싱) 2R KO패
+			a.og-close
+		.box-record-pop#pop04
+			.txt-wrap
+				p.name 양초록 선수
+					em Pro
+				p.recored 전적 : 7전 3승(2KO) 3패 1무
+			ul.record-list
+				li 양초록(sm복싱) vs 채시원(평촌권투) 2R KO승
+				li 양초록(sm복싱) vs 손정환(몬스터) 3R KO승
+				li 양초록(sm복싱) vs 박준석(영복싱) 4R 판정패
+				li 양초록(sm복싱) vs 이흑산(천안헐크) 4R 판정패
+				li 양초록(sm복싱) vs 홍영우(구미거북) 4R 판정승
+			a.og-close
+		.box-record-pop#pop05
+			.txt-wrap
+				p.name 홍예준 선수
+					em Elite
+				//- p.recored 전적 : 7전 3승(2KO) 3패 1무
+			ul.record-list
+				li 2019년 전국체전 서울시 대표 선수 (-81kg 일반)
+				li 2018년 서울신인 선수권 대회 3위 -91kg
+				li 2018년 전국 회장배 복싱대회 고등부 -81kg 8강
+				li 2019년 전국 협회장배 복싱대회 대학부 -81kg 8강
+				li 2019년 제100회 전국체전 서울대표 선발전 -81kg 1위
+				li 2019년 전국 우승권 복싱대회 -91kg 2위
+				li 2019년 제100회 전국체육대회 -81kg 8강
+			a.og-close
+		.box-record-pop#pop06
+			.txt-wrap
+				p.name 김의영 선수
+					em Elite
+				//- p.recored 전적 : 7전 3승(2KO) 3패 1무
+			ul.record-list
+				li 2019년 전국 협회장배 복싱대회 +91kg 일반부 3위
+				li 2019년 제100회 전국체전 대표 선발전 +91kg 2위
+				li 2019년 전국 우승권 복싱대회 +91kg 우승(1위)
+			a.og-close
 append script
+	script.
+		append script
 	script.
 		$(document).ready(function(){
 			 // 선수 슬라이드

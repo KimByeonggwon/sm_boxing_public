@@ -735,24 +735,12 @@
   .box-team-slider{
     .box-team-slider-main{
       *[class*="slider-box"]{
-        margin-top:35px;height:100%;max-height:565px;box-sizing:border-box;
+        margin-top:35px;height:100%;max-height:565px;box-sizing:border-box;text-align:center;
         .box-tit{font-size:40px;font-weight:700;letter-spacing:-2.5px;text-align:center;}
-        .box-record{margin-top:20px;padding:20px;display:block;border:1px solid #222;box-sizing:border-box;}
-        .record-list{
-          dt{margin-bottom:7px;font-size:20px;line-height:27px;font-weight:700;letter-spacing:-2.3px;word-break:keep-all;word-wrap:break-word;}
-          dd{
-            padding-left:17px;position:relative;font-size:15px;line-height:25px;letter-spacing:-1.5px;word-break:keep-all;word-wrap:break-word;
-            &:before{
-              position:absolute;left:5px;top:10px;
-              content:'';display:inline-block;width:4px;height:4px;background:#fff;border-radius:50%;
-            }
-          }
-        }
-        .bx-motto{
-          position: absolute;bottom:190px;left:22px;
-          .tit{margin-bottom:5px;display:block;font-size:15px;}
-          .txt{font-size:20px;line-height:27px;font-weight:700;}
-          br{display:block;}
+        .record{margin-top:20px;font-size:24px;text-align:center;font-weight:700;}
+        .btn-list{
+          margin-top:30px;display:inline-block;font-size:0;border:1px solid #fff;
+          span{padding:0 40px;display:inline-block;font-size:15px;line-height:40px;color:#fff;}
         }
       }
       .slider-box01{padding-bottom:325px;background:url('../../images/mobile/img_team01.png') no-repeat top 290px right -30px;background-size:320px}
@@ -868,3 +856,53 @@
   }
 }
 .ceo-end { padding-bottom: 80px;}
+
+.box-record-pop{
+  display:none;position:fixed;top:50%;left:50%;margin-left:-175px;width:350px;min-height:300px; padding:30px;background:#111;box-sizing:border-box;z-index:150;
+  .txt-wrap{
+    padding-bottom:15px;margin-bottom:30px;border-bottom:1px solid #222;text-align:left;
+    .name{
+      font-size:20px;font-weight:700;
+      em{margin-left:10px;display:inline-block;font-size:15px;color:#bd2731;}
+    }
+    .recored{margin-top:10px;font-size:15px;}
+  }
+  .record-list{
+    li{
+      padding-left:17px;position:relative;font-size:15px;line-height:25px;letter-spacing:-1.5px;word-break:keep-all;word-wrap:break-word;text-align:left;
+      &:before{
+        position:absolute;left:5px;top:10px;
+        content:'';display:inline-block;width:4px;height:4px;background:#fff;border-radius:50%;
+      }
+    }
+  }
+  .og-close {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  .og-close::before,
+  .og-close::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    height: 1px;
+    background: #888;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .og-close::after {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  .og-close:hover::before,
+  .og-close:hover::after {
+    background: #fff;
+  }
+}
