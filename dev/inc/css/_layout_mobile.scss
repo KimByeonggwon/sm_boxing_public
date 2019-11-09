@@ -72,6 +72,10 @@
   &.no-select{
     p{position:relative;margin-right:0;font-size:22px;line-height:96px;font-weight:700;color:#fff;background:#000;border:none;box-sizing:border-box;text-align:center;}
   }
+  &.long{
+    width:350px;
+    .ui-selectmenu-button.ui-button{width:350px;}
+  }
 }
 
 .ui-button .ui-icon, .ui-button:focus .ui-icon, .ui-button:hover .ui-icon, .ui-state-focus .ui-icon, .ui-state-hover .ui-icon{width:21px;height:11px;background:url('../../images/pc/ico_2dep_select.png') no-repeat center center;}
@@ -743,13 +747,12 @@
           span{padding:0 40px;display:inline-block;font-size:15px;line-height:40px;color:#fff;}
         }
       }
-      .slider-box01{padding-bottom:325px;background:url('../../images/mobile/img_team01.png') no-repeat top 290px right -30px;background-size:320px}
-      .slider-box02{padding-bottom:350px;background:url('../../images/mobile/img_team02.png') no-repeat top 295px left 50px;background-size:320px;}
-      .slider-box03{padding-bottom:325px;background:url('../../images/mobile/img_team03.png') no-repeat top 290px left 45px;background-size:320px;}
-      .slider-box04{padding-bottom:300px;background:url("../../images/mobile/img_team04.png") no-repeat top 290px left -25px;background-size:360px;}
-      .slider-box05{padding-bottom:300px;background:url('../../images/mobile/img_team05.png') no-repeat top 285px left 30px;background-size:340px;}
-      .slider-box06{padding-bottom:280px;background:url('../../images/mobile/img_team06.png') no-repeat top 300px center;background-size:320px;}
-      .slider-box07{padding-bottom:400px;background:url('../../images/mobile/img_team07.png') no-repeat top 280px center;background-size:350px;}
+      .slider-box02{padding-bottom:300px;background:url('../../images/mobile/img_team02.png') no-repeat bottom -45px left 25px;background-size:320px;}
+      .slider-box03{padding-bottom:300px;background:url('../../images/mobile/img_team03.png') no-repeat bottom -45px left 25px;background-size:320px;}
+      .slider-box04{padding-bottom:300px;background:url("../../images/mobile/img_team04.png") no-repeat bottom -75px center;background-size:360px;}
+      .slider-box05{padding-bottom:300px;background:url('../../images/mobile/img_team05.png') no-repeat bottom -65px left 10px;background-size:340px;}
+      .slider-box06{padding-bottom:347px;background:url('../../images/mobile/img_team06.png') no-repeat bottom -40px center;background-size:320px;}
+      .slider-box07{padding-bottom:347px;background:url('../../images/mobile/img_team07.png') no-repeat bottom -60px center;background-size:350px;}
     }
     .box-team-slider-nav{
       width:100%;margin:0 auto;
