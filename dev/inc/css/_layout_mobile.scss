@@ -332,6 +332,30 @@
       }
     }
 
+    .pg_wrap{
+      margin-top:50px;margin-bottom:95px;text-align:center;
+      .pg_current{
+        position:relative;color:#bd2731;display:inline-block;padding:0 10px;background:none;border:none;box-shadow:none;min-width:auto;border-radius:0;font-weight:normal;height:auto;line-height:19px;
+        &::before{position:absolute;bottom:-5px;left:50%;margin-left:-5px;content:'';display:inline-block;width:10px;height:1px;background-color:#bd2731;}
+      }
+      .pg_page{
+        position:relative;color:#fff;display:inline-block;padding:0 10px;background:none;border:none;box-shadow:none;min-width:auto;border-radius:0;font-weight:normal;height:auto;line-height:19px;
+        &.pg_end{
+          display:inline-block;width:30px;height:19px;vertical-align:middle;
+          background:url('../../images/mobile/ico_paging_next.png') no-repeat center center;background-size:10px 17.5px;
+          &.on{ background:url('../../images/mobile/ico_paging_next.png') no-repeat center center;background-size:10px 17.5px;}
+        }
+        &.pg_start{
+          display:inline-block;width:30px;height:19px;vertical-align:middle;
+          background:url('../../images/mobile/ico_paging_prev.png') no-repeat center center;background-size:10px 17.5px;
+          &.on{ background:url('../../images/mobile/ico_paging_prev.png') no-repeat center center;background-size:10px 17.5px;}
+        }
+      }
+    }
+
+
+
+
     .view-wrap{
       .view-tit-wrap{
         position:relative;padding:22px 14px 20px;border-top:2px solid #fff;border-bottom:1px solid #fff;

@@ -447,8 +447,30 @@
         .on{
           .txt{
             position:relative;color:#bd2731;
-            &::before{position:absolute;bottom:-5px;left:0;content:'';display:inline-block;width:10px;height:1px;background-color:#bd2731;}
+            &::before{position:absolute;bottom:-5px;left:50%;margin-left:-5px;content:'';display:inline-block;width:10px;height:1px;background-color:#bd2731;}
           }
+        }
+      }
+    }
+
+
+    .pg_wrap{
+      margin-top:50px;margin-bottom:140px;text-align:center;
+      .pg_current{
+        position:relative;color:#bd2731;display:inline-block;padding:0 5px;background:none;border:none;box-shadow:none;min-width:auto;border-radius:0;font-weight:normal;height:auto;line-height:18px;
+        &::before{position:absolute;bottom:-5px;left:50%;margin-left:-5px;content:'';display:inline-block;width:10px;height:1px;background-color:#bd2731;}
+      }
+      .pg_page{
+        position:relative;color:#fff;display:inline-block;padding:0 5px;background:none;border:none;box-shadow:none;min-width:auto;border-radius:0;font-weight:normal;height:auto;line-height:18px;
+        &.pg_end{
+          margin-left:15px;display:inline-block;width:18px;height:18px;vertical-align:middle;
+          background:url('../../images/pc/ico_paging_next_off.png') no-repeat center center;
+          &.on{background:url('../../images/pc/ico_paging_next.png') no-repeat center center;}
+        }
+        &.pg_start{
+          margin-right:15px;display:inline-block;width:18px;height:18px;vertical-align:middle;
+          background:url('../../images/pc/ico_paging_prev_off.png') no-repeat center center;
+          &.on{background:url('../../images/pc/ico_paging_prev.png') no-repeat center center;}
         }
       }
     }
