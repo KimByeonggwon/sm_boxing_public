@@ -270,6 +270,28 @@
   .community-cont{
     margin:0 20px;padding-top:94px;
     .tit{margin-bottom:23px;font-family: 'Anton';font-size:30px;text-align:center;}
+    #bo_list .tbl_head01.tbl_wrap{
+      table{width:100%;border-top:2px solid #fff;}
+      thead{
+        th{
+          padding:20px 0;font-size:16px;font-weight:700;text-align:center;border-bottom:1px solid #fff;
+          &:nth-child(2){width:75%;}
+          &:nth-child(3){width:25%;}
+          &:nth-child(1),
+          &:nth-child(4){display:none;}
+        }
+      }
+      tbody{
+        td{
+          padding:22px 0;text-align:center;border-bottom:1px solid #222;
+          a{display:inline-block;padding:0 14px;font-size:15px;line-height:21px;color:#fff;word-break:keep-all;word-wrap:break-word;}
+          &:nth-child(2){width:75%;text-align:left;}
+          &:nth-child(3){width:25%;}
+          &:nth-child(1),
+          &:nth-child(4){display:none;}
+        }
+      }
+    }
     .tb-wrap{
       table{width:100%;border-top:2px solid #fff;}
       thead{
@@ -635,8 +657,8 @@
           .btn-sns{
             margin-left:10px;display:inline-block;width:35px;height:35px;font-size:0;
             &.youtube{background:url('../../images/pc/ico_youtube.png') no-repeat center top;background-size:100%;}
-            &.instagram{background:url('../../images/pc/ico_instagram.png') no-repeat center top;background-size:100%;}
-            &.facebook{background:url('../../images/pc/ico_facebook.png') no-repeat center top;background-size:100%;}
+            &.instagram{background:url('../../images/mobile/ico_instagram.png') no-repeat center top;background-size:100%;}
+            &.facebook{background:url('../../images/mobile/ico_facebook.png') no-repeat center top;background-size:100%;}
             &:first-child{margin-left:0;}
           }
         }
@@ -760,7 +782,7 @@
         width:70%;margin:0 auto;
       }
       .slick-arrow{
-        position: absolute;top:50%;margin-top:-12px;padding:0 10px;height:25px;text-indent:-99999px;
+        position: absolute;top:50%;margin-top:-12px;padding:0 10px;height:25px;text-indent:-99999px;z-index:5;
         &.slick-prev{
           left:-3px;
           background:url('../../images/mobile/ico_arrow_prev.png') no-repeat center center;

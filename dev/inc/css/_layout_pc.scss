@@ -397,6 +397,19 @@
   .community-cont{
     padding-top:224px;width:calc(1200/1920*100%);margin:0 auto;
     .tit{padding-bottom:40px;font-family: 'Anton';font-size:60px;text-align:center;}
+    #bo_list .tbl_head01.tbl_wrap{
+      table{width:100%;border-top:3px solid #fff;}
+      thead{
+        th{padding:21px 0;font-size:20px;font-weight:700;text-align:center;border-bottom:1px solid #fff;}
+      }
+      tbody{
+        td{
+          padding:22px 0;text-align:center;border-bottom:1px solid #222;
+          a{font-size:16px;color:#fff;}
+          &:nth-child(2){padding-left:5%!important;text-align:left;}
+        }
+      }
+    }
     .tb-wrap{
       table{width:100%;border-top:3px solid #fff;}
       thead{
@@ -406,7 +419,7 @@
         td{
           padding:22px 0;text-align:center;border-bottom:1px solid #222;
           a{font-size:16px;color:#fff;}
-          &:nth-child(2){padding-left:5%;text-align:left;}
+          &:nth-child(2){padding-left:5%!important;text-align:left;}
         }
       }
     }
